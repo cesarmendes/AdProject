@@ -9,3 +9,15 @@ C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProje
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject\obj\Debug\netcoreapp2.0\AdProject.AssemblyInfo.cs
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject\obj\Debug\netcoreapp2.0\AdProject.dll
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject\obj\Debug\netcoreapp2.0\AdProject.pdb
+D:\Projetos\AdProject\AdProject\bin\Debug\netcoreapp2.0\AdProject.deps.json
+D:\Projetos\AdProject\AdProject\bin\Debug\netcoreapp2.0\AdProject.runtimeconfig.json
+D:\Projetos\AdProject\AdProject\bin\Debug\netcoreapp2.0\AdProject.runtimeconfig.dev.json
+D:\Projetos\AdProject\AdProject\bin\Debug\netcoreapp2.0\AdProject.dll
+D:\Projetos\AdProject\AdProject\bin\Debug\netcoreapp2.0\AdProject.pdb
+D:\Projetos\AdProject\AdProject\obj\Debug\netcoreapp2.0\AdProject.csprojResolveAssemblyReference.cache
+D:\Projetos\AdProject\AdProject\obj\Debug\netcoreapp2.0\AdProject.csproj.CoreCompileInputs.cache
+D:\Projetos\AdProject\AdProject\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\Projetos\AdProject\AdProject\obj\Debug\netcoreapp2.0\AdProject.AssemblyInfoInputs.cache
+D:\Projetos\AdProject\AdProject\obj\Debug\netcoreapp2.0\AdProject.AssemblyInfo.cs
+D:\Projetos\AdProject\AdProject\obj\Debug\netcoreapp2.0\AdProject.dll
+D:\Projetos\AdProject\AdProject\obj\Debug\netcoreapp2.0\AdProject.pdb

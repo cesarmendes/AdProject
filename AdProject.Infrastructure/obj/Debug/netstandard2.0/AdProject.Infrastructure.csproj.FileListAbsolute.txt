@@ -9,3 +9,14 @@ C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProje
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\AdProject.Domain.dll
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\AdProject.Domain.pdb
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Infrastructure\obj\Debug\netstandard2.0\AdProject.Infrastructure.csprojResolveAssemblyReference.cache
+D:\Projetos\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\AdProject.Infrastructure.deps.json
+D:\Projetos\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\AdProject.Infrastructure.dll
+D:\Projetos\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\AdProject.Infrastructure.pdb
+D:\Projetos\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\AdProject.Domain.dll
+D:\Projetos\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\AdProject.Domain.pdb
+D:\Projetos\AdProject\AdProject.Infrastructure\obj\Debug\netstandard2.0\AdProject.Infrastructure.csprojResolveAssemblyReference.cache
+D:\Projetos\AdProject\AdProject.Infrastructure\obj\Debug\netstandard2.0\AdProject.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Projetos\AdProject\AdProject.Infrastructure\obj\Debug\netstandard2.0\AdProject.Infrastructure.AssemblyInfoInputs.cache
+D:\Projetos\AdProject\AdProject.Infrastructure\obj\Debug\netstandard2.0\AdProject.Infrastructure.AssemblyInfo.cs
+D:\Projetos\AdProject\AdProject.Infrastructure\obj\Debug\netstandard2.0\AdProject.Infrastructure.dll
+D:\Projetos\AdProject\AdProject.Infrastructure\obj\Debug\netstandard2.0\AdProject.Infrastructure.pdb

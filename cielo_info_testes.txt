@@ -1,0 +1,11 @@
+Requisição: https://apisandbox.cieloecommerce.cielo.com.br * 
+Consulta: https://apiquerysandbox.cieloecommerce.cielo.com.br
+
+
+
+Cielo
+Sandbox Register
+Successfully Registered! Save your sandbox environment credentials.
+
+MerchantId: 190bf54c-2f69-4c90-9616-061c3cda7d3c
+MerchantKey: WZIYMOMXEAWGPIIUTNYCJMTSKXKDKKJKOPFOLAMP
