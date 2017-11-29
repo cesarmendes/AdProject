@@ -4,14 +4,15 @@ using System.Text;
 
 namespace AdProject.Domain.ValueObjects
 {
-    public abstract class Entity<Type>
+    public abstract class Entity<TKey>
+        where TKey : struct
     {
         #region Private variables
-        private Type _id;
+        private TKey _id;
         #endregion
 
         #region Public properties
-        public Type Id
+        public TKey Id
         {
             get { return _id; }
             set { _id = value; }
@@ -23,7 +24,7 @@ namespace AdProject.Domain.ValueObjects
         {
         }
 
-        public Entity(Type id)
+        public Entity(TKey id)
         {
             this._id = id;
         }

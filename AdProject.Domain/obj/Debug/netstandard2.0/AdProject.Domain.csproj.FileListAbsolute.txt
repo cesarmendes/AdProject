@@ -1,7 +1,6 @@
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Domain\bin\Debug\netstandard2.0\AdProject.Domain.deps.json
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Domain\bin\Debug\netstandard2.0\AdProject.Domain.dll
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Domain\bin\Debug\netstandard2.0\AdProject.Domain.pdb
-C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Domain\obj\Debug\netstandard2.0\AdProject.Domain.csprojResolveAssemblyReference.cache
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Domain\obj\Debug\netstandard2.0\AdProject.Domain.csproj.CoreCompileInputs.cache
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Domain\obj\Debug\netstandard2.0\AdProject.Domain.AssemblyInfoInputs.cache
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Domain\obj\Debug\netstandard2.0\AdProject.Domain.AssemblyInfo.cs
