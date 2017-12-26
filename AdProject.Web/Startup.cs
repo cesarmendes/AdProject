@@ -35,7 +35,7 @@ namespace AdProject.Web
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Site/Error");
             }
 
             app.UseStaticFiles();
@@ -44,7 +44,7 @@ namespace AdProject.Web
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Site}/{action=Index}/{id?}");
             });
         }
     }
