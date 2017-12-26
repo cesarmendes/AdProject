@@ -8,7 +8,7 @@ using AdProject.Web.Models;
 
 namespace AdProject.Web.Controllers
 {
-    public class HomeController : Controller
+    public class SiteController : Controller
     {
         public IActionResult Index()
         {
