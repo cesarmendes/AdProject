@@ -20,7 +20,8 @@ namespace AdProject.Infrastructure.Data.Contexts.Configurations
             builder
                 .Property(profile => profile.Id)
                 .HasColumnName(ProfileTable.FIELD_ID)
-                .HasColumnType(ProfileTable.TYPE_BIGINT);
+                .HasColumnType(ProfileTable.TYPE_BIGINT)
+                .ValueGeneratedOnAdd();
 
         }
     }
