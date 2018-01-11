@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using AdProject.Domain.Entities;
+using Microsoft.AspNet.Identity;
 
 namespace AdProject.Web
 {
@@ -21,6 +23,8 @@ namespace AdProject.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddIdentity<User, Role>();
+        
 
             services.AddMvc();
         }

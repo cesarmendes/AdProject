@@ -1,35 +1,52 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿/* BACKGROUND COLORS THEME*/
+.green {
+    color: #009688;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.green-light {
+    color: #52C7B8;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+.green-dark {
+    color: #00675B;
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
+.purple {
+    color: #8E24AA;
 }
 
-/* QR code generator */
-#qrCode {
-    margin: 15px;
+.purple-light {
+    color: #C158DC;
 }
 
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
-    }
+.purple-dark {
+    color: #5C007A;
+}
+
+/* BACKGROUND COLORS THEME*/
+.bg-white {
+    background-color:#FFFFFF;
+}
+.bg-green {
+    background-color: #009688;
+}
+
+.bg-green-light {
+    background-color: #52C7B8;
+}
+
+.bg-green-dark {
+    background-color: #00675B;
+}
+
+.bg-purple {
+    background-color: #8E24AA;
+}
+
+.bg-purple-light {
+    background-color: #C158DC;
+}
+
+.bg-purple-dark {
+    background-color: #5C007A;
 }

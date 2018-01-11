@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "0daf7444c632f164e3c97c0295e6a92796c07eed"
+    "signature": "b40dae4ea0b88a1032b1d53044dad0daae7de192"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,11 +10,19 @@
       "AdProject.Infrastructure/1.0.0": {
         "dependencies": {
           "AdProject.Domain": "1.0.0",
+          "Microsoft.AspNet.Identity.Core": "2.2.1",
           "Microsoft.EntityFrameworkCore.Tools": "2.0.1",
-          "NETStandard.Library": "2.0.0"
+          "NETStandard.Library": "2.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.0.1.0",
+          "Microsoft.Extensions.Identity.Stores": "2.0.1.0"
         },
         "runtime": {
           "AdProject.Infrastructure.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Identity.Core/2.2.1": {
+        "runtime": {
+          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {}
         }
       },
       "Microsoft.CSharp/4.4.0": {
@@ -408,6 +416,16 @@
         "runtime": {
           "AdProject.Domain.dll": {}
         }
+      },
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/2.0.1.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Identity.Stores/2.0.1.0": {
+        "runtime": {
+          "Microsoft.Extensions.Identity.Stores.dll": {}
+        }
       }
     }
   },
@@ -416,6 +434,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.AspNet.Identity.Core/2.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jjurNglpmcv0SLBd4Fmar8ZoJ2yqfTf6iuP3p8wVH7Nvanfo8l3qTBzq3qRQz2BQlb6iXJiDWPjcnIImVz512g==",
+      "path": "microsoft.aspnet.identity.core/2.2.1",
+      "hashPath": "microsoft.aspnet.identity.core.2.2.1.nupkg.sha512"
     },
     "Microsoft.CSharp/4.4.0": {
       "type": "package",
@@ -490,7 +515,7 @@
     "Microsoft.Extensions.Logging/2.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-rE83LQh4KwSQEEjw62MQMejlK1TPqTOiQaHkCujA9SfE2FeJbPA5Z9J8aCZZgIGX04s3uzip23SlrW78GmRmXg==",
+      "sha512": "sha512-VP10syWV/vxYYMKgZ2eDESmUsz3gPxvBn5J6tkVN8lI4M+dF43RN8fWsEPbcAneDmZrHl3Pv23z05nmyGkJlpg==",
       "path": "microsoft.extensions.logging/2.0.0",
       "hashPath": "microsoft.extensions.logging.2.0.0.nupkg.sha512"
     },
@@ -595,7 +620,7 @@
     "System.Interactive.Async/3.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-JxJFnfSdEud7mZ1keTgM5qZN0qfjz1vltRcHmsN6ZxJDClT1eZoQkwSv/6YWYwxzqxt2uXMh5GJiEMGUoemtAQ==",
+      "sha512": "sha512-DkUY7nMzVjLJxXjGm3rFY6svK2Y1aM0Kore+nMlA3USGeNQP+0J7tuHlVFvu//IVKO2vDGuBHH8ACH0aAxvsyw==",
       "path": "system.interactive.async/3.1.1",
       "hashPath": "system.interactive.async.3.1.1.nupkg.sha512"
     },
@@ -734,6 +759,16 @@
     },
     "AdProject.Domain/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/2.0.1.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.Identity.Stores/2.0.1.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

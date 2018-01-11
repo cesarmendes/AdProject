@@ -797,7 +797,7 @@
       ]
     },
     "Microsoft.Extensions.Logging/2.0.0": {
-      "sha512": "rE83LQh4KwSQEEjw62MQMejlK1TPqTOiQaHkCujA9SfE2FeJbPA5Z9J8aCZZgIGX04s3uzip23SlrW78GmRmXg==",
+      "sha512": "VP10syWV/vxYYMKgZ2eDESmUsz3gPxvBn5J6tkVN8lI4M+dF43RN8fWsEPbcAneDmZrHl3Pv23z05nmyGkJlpg==",
       "type": "package",
       "path": "microsoft.extensions.logging/2.0.0",
       "files": [
@@ -1431,7 +1431,7 @@
       ]
     },
     "System.Interactive.Async/3.1.1": {
-      "sha512": "JxJFnfSdEud7mZ1keTgM5qZN0qfjz1vltRcHmsN6ZxJDClT1eZoQkwSv/6YWYwxzqxt2uXMh5GJiEMGUoemtAQ==",
+      "sha512": "DkUY7nMzVjLJxXjGm3rFY6svK2Y1aM0Kore+nMlA3USGeNQP+0J7tuHlVFvu//IVKO2vDGuBHH8ACH0aAxvsyw==",
       "type": "package",
       "path": "system.interactive.async/3.1.1",
       "files": [
@@ -2597,7 +2597,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cesar.silva.ext\\.nuget\\packages\\": {},
+    "C:\\Users\\cesar\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -2606,17 +2606,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Infrastructure\\AdProject.Infrastructure.csproj",
+      "projectUniqueName": "D:\\Projetos\\AdProject\\AdProject.Infrastructure\\AdProject.Infrastructure.csproj",
       "projectName": "AdProject.Infrastructure",
-      "projectPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Infrastructure\\AdProject.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\cesar.silva.ext\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Infrastructure\\obj\\",
+      "projectPath": "D:\\Projetos\\AdProject\\AdProject.Infrastructure\\AdProject.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\cesar\\.nuget\\packages\\",
+      "outputPath": "D:\\Projetos\\AdProject\\AdProject.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\cesar.silva.ext\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cesar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2629,8 +2629,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Domain\\AdProject.Domain.csproj": {
-              "projectPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Domain\\AdProject.Domain.csproj"
+            "D:\\Projetos\\AdProject\\AdProject.Domain\\AdProject.Domain.csproj": {
+              "projectPath": "D:\\Projetos\\AdProject\\AdProject.Domain\\AdProject.Domain.csproj"
             }
           }
         }
