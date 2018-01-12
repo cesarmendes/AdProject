@@ -8,6 +8,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using AdProject.Domain.Entities;
 using Microsoft.AspNet.Identity;
+using AdProject.Infrastructure.Identity;
+using AdProject.Infrastructure.Data.Contexts;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace AdProject.Web
 {
@@ -23,7 +27,18 @@ namespace AdProject.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddIdentity<User, Role>();
+            services.AddDbContext<IdentityContext>(options => options.UseSqlServer(Configuration.GetConnectionString("dbconexao")));
+
+            services
+                .AddIdentity<UserIdentity, RoleIdentity>()
+                .AddEntityFrameworkStores<IdentityContext>()
+                .AddDefaultTokenProviders();
+
+            services
+                .ConfigureApplicationCookie(options => 
+                {
+                    options.LoginPath = "/Account/Login";
+                });
         
 
             services.AddMvc();
@@ -41,6 +56,8 @@ namespace AdProject.Web
             {
                 app.UseExceptionHandler("/Site/Error");
             }
+
+            app.UseAuthentication();
 
             app.UseStaticFiles();
 

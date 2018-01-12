@@ -7,5 +7,6 @@ namespace AdProject.Domain.Entities
 {
     public class Profile : Entity<long>
     {
+        public string Name { get; set; }
     }
 }

@@ -1,25 +1,102 @@
-﻿/* BACKGROUND COLORS THEME*/
-.green {
+﻿.text-logo {
+    font-family:Lobster;
+}
+
+
+/* BUTTONS COLOR BOOTSTRAP*/
+.btn-purple {
+    color: #fff;
+    background-color: #8E24AA;
+    border-color: #8E24AA;
+}
+
+    .btn-purple:hover {
+        color: #fff;
+        background-color: #7B1FA2;
+        border-color: #7B1FA2;
+    }
+
+    .btn-purple:focus, .btn-purple.focus {
+        box-shadow: 0 0 0 0.2rem rgba(123, 31, 162, 0.5);
+    }
+
+    .btn-purple.disabled, .btn-purple:disabled {
+        background-color: #E1BEE7;
+        border-color: #E1BEE7;
+    }
+
+    .btn-purple:not([disabled]):not(.disabled):active, .btn-purple:not([disabled]):not(.disabled).active,
+    .show > .btn-purple.dropdown-toggle {
+        color: #fff;
+        background-color: #6A1B9A;
+        border-color: #6A1B9A;
+    }
+
+        .btn-purple:not([disabled]):not(.disabled):active:focus, .btn-purple:not([disabled]):not(.disabled).active:focus,
+        .show > .btn-primary.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.2rem rgba(106, 27, 154, 0.5);
+        }
+
+
+
+/* FORMS COLOR BOOTSTRAP*/
+.form-control {
+    color: #5C007A;
+    border: 1px solid #009688;
+}
+
+
+/* PLACEHOLDER COLOR BOOTSTRAP*/
+
+.form-control::-webkit-input-placeholder {
+    color: #C158DC;
+    opacity: 0.7;
+}
+
+.form-control::-moz-placeholder {
+    color: #C158DC;
+    opacity: 0.7;
+}
+
+.form-control:-ms-input-placeholder {
+    color: #C158DC;
+    opacity: 0.7;
+}
+
+.form-control::-ms-input-placeholder {
+    color: #C158DC;
+    opacity: 0.7;
+}
+
+.form-control::placeholder {
+    color: #C158DC;
+    opacity: 0.7;
+}
+
+
+
+/* BACKGROUND COLORS THEME*/
+.text-green {
     color: #009688;
 }
 
-.green-light {
+.text-green-light {
     color: #52C7B8;
 }
 
-.green-dark {
+.text-green-dark {
     color: #00675B;
 }
 
-.purple {
+.text-purple {
     color: #8E24AA;
 }
 
-.purple-light {
+.text-purple-light {
     color: #C158DC;
 }
 
-.purple-dark {
+.text-purple-dark {
     color: #5C007A;
 }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdProject.Web.Resources;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,9 +9,14 @@ namespace AdProject.Web.Models
 {
     public class LoginViewModel
     {
+        [Display(Name = "Email", ResourceType = typeof(TextResource))]
         [Required]
         public string Email { get; set; }
+
+        [Display(Name = "Password", ResourceType = typeof(TextResource))]
         [Required]
         public string Password { get; set; }
+
+        public bool Connected { get; set; }
     }
 }

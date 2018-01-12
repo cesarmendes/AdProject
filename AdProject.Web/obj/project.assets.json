@@ -5039,6 +5039,16 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
+      "AdProject.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/AdProject.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AdProject.Application.dll": {}
+        }
+      },
       "AdProject.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -5047,6 +5057,21 @@
         },
         "runtime": {
           "bin/placeholder/AdProject.Domain.dll": {}
+        }
+      },
+      "AdProject.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "AdProject.Domain": "1.0.0",
+          "Microsoft.AspNet.Identity.Core": "2.2.1",
+          "Microsoft.EntityFrameworkCore.Tools": "2.0.1"
+        },
+        "compile": {
+          "bin/placeholder/AdProject.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AdProject.Infrastructure.dll": {}
         }
       }
     }
@@ -13138,15 +13163,27 @@
         "windowsazure.storage.nuspec"
       ]
     },
+    "AdProject.Application/1.0.0": {
+      "type": "project",
+      "path": "../AdProject.Application/AdProject.Application.csproj",
+      "msbuildProject": "../AdProject.Application/AdProject.Application.csproj"
+    },
     "AdProject.Domain/1.0.0": {
       "type": "project",
       "path": "../AdProject.Domain/AdProject.Domain.csproj",
       "msbuildProject": "../AdProject.Domain/AdProject.Domain.csproj"
+    },
+    "AdProject.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../AdProject.Infrastructure/AdProject.Infrastructure.csproj",
+      "msbuildProject": "../AdProject.Infrastructure/AdProject.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "AdProject.Application >= 1.0.0",
       "AdProject.Domain >= 1.0.0",
+      "AdProject.Infrastructure >= 1.0.0",
       "Microsoft.AspNet.Identity.Core >= 2.2.1",
       "Microsoft.AspNetCore.All >= 2.0.5",
       "Microsoft.NETCore.App >= 2.0.0",
@@ -13186,6 +13223,12 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
+            "D:\\Projetos\\AdProject\\AdProject.Infrastructure\\AdProject.Infrastructure.csproj": {
+              "projectPath": "D:\\Projetos\\AdProject\\AdProject.Infrastructure\\AdProject.Infrastructure.csproj"
+            },
+            "D:\\Projetos\\AdProject\\AdProject.Application\\AdProject.Application.csproj": {
+              "projectPath": "D:\\Projetos\\AdProject\\AdProject.Application\\AdProject.Application.csproj"
+            },
             "D:\\Projetos\\AdProject\\AdProject.Domain\\AdProject.Domain.csproj": {
               "projectPath": "D:\\Projetos\\AdProject\\AdProject.Domain\\AdProject.Domain.csproj"
             }
