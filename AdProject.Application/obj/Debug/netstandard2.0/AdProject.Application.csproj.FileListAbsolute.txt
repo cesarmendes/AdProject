@@ -6,6 +6,7 @@ C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProje
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Application\obj\Debug\netstandard2.0\AdProject.Application.AssemblyInfo.cs
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Application\obj\Debug\netstandard2.0\AdProject.Application.dll
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Application\obj\Debug\netstandard2.0\AdProject.Application.pdb
+C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Application\obj\Debug\netstandard2.0\AdProject.Application.csprojResolveAssemblyReference.cache
 D:\Projetos\AdProject\AdProject.Application\bin\Debug\netstandard2.0\AdProject.Application.deps.json
 D:\Projetos\AdProject\AdProject.Application\bin\Debug\netstandard2.0\AdProject.Application.dll
 D:\Projetos\AdProject\AdProject.Application\bin\Debug\netstandard2.0\AdProject.Application.pdb
@@ -14,5 +15,3 @@ D:\Projetos\AdProject\AdProject.Application\obj\Debug\netstandard2.0\AdProject.A
 D:\Projetos\AdProject\AdProject.Application\obj\Debug\netstandard2.0\AdProject.Application.AssemblyInfo.cs
 D:\Projetos\AdProject\AdProject.Application\obj\Debug\netstandard2.0\AdProject.Application.dll
 D:\Projetos\AdProject\AdProject.Application\obj\Debug\netstandard2.0\AdProject.Application.pdb
-C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Application\obj\Debug\netstandard2.0\AdProject.Application.csprojResolveAssemblyReference.cache
-D:\Projetos\AdProject\AdProject.Application\obj\Debug\netstandard2.0\AdProject.Application.csprojResolveAssemblyReference.cache

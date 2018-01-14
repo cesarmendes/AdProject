@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AdProject.Infrastructure.Identity
 {
-    public class UserIdentity : IdentityUser<long>
+    public class AppUser : IdentityUser<long>
     {
         public virtual Profile Profile { get; set; }
     }

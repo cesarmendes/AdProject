@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AdProject.Infrastructure.Identity
 {
-    public class RoleIdentity : IdentityRole<long>
+    public class AppUserRole : IdentityUserRole<long>
     {
     }
 }

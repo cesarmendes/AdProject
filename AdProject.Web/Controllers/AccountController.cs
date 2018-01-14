@@ -12,11 +12,11 @@ namespace AdProject.Web.Controllers
 {
     public class AccountController : Controller
     {
-        private  UserManager<UserIdentity> UserManager { get; set; }
-        public SignInManager<UserIdentity> SignInManager { get; set; }
+        private UserManager<AppUser> UserManager { get; set; }
+        public SignInManager<AppUser> SignInManager { get; set; }
 
 
-        public AccountController(UserManager<UserIdentity> userManager, SignInManager<UserIdentity> signInManager)
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
         {
             this.UserManager = userManager;
             this.SignInManager = signInManager;
@@ -33,24 +33,44 @@ namespace AdProject.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var result = await this.SignInManager.PasswordSignInAsync(model.Email, model.Password, model.Connected, true);
+                if (!SignInManager.IsSignedIn(User))
+                {
+                    var result = await this.SignInManager.PasswordSignInAsync(model.Email, model.Password, model.Connected, true);
 
-                if (result.Succeeded)
-                {
-                }
-                else if (result.IsLockedOut)
-                {
-                }
-                else if (result.RequiresTwoFactor)
-                {
+                    if (result.Succeeded)
+                    {
+                        return RedirectToAction(nameof(SiteController.Index), "Site");
+                    }
+                    else if (result.IsLockedOut)
+                    {
+                        return RedirectToAction(nameof(Lockout));
+                    }
+                    else if (result.RequiresTwoFactor)
+                    {
 
-                }
-                else if (result.IsNotAllowed)
-                {
+                    }
+                    else if (result.IsNotAllowed)
+                    {
 
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Seus dados estão incorreto, por favor tente novamente.");
+                    }
                 }
             }
 
+            return View();
+        }
+
+        public async Task<IActionResult> Logoff()
+        {
+            await this.SignInManager.SignOutAsync();
+            return RedirectToAction("Index", "Site");
+        }
+
+        public IActionResult Lockout()
+        {
             return View();
         }
 
@@ -68,10 +88,11 @@ namespace AdProject.Web.Controllers
 
                 if (user != null)
                 {
+                    ModelState.AddModelError("", "Já existe um usuário cadastrado com essas informações!");
                 }
                 else
                 {
-                    var userIdentity = new UserIdentity();
+                    var userIdentity = new Infrastructure.Identity.AppUser();
                     userIdentity.UserName = model.Email;
                     userIdentity.Email = model.Email;
                     userIdentity.Profile = new Profile();
@@ -81,6 +102,7 @@ namespace AdProject.Web.Controllers
 
                     if (result.Succeeded)
                     {
+                        return RedirectToAction(nameof(SiteController.Index), "Site");
                     }
                     else
                     {
