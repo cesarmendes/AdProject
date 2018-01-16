@@ -1,7 +1,15 @@
 ﻿.text-logo {
-    font-family:Lobster;
+    font-family: Lobster;
 }
 
+
+.border-green-dark {
+    border-color: #00675B !important;
+}
+
+.shadown-green-dark {
+    box-shadow: 0px 4px 5px 0px #00675B;
+}
 
 /* BUTTONS COLOR BOOTSTRAP*/
 .btn-purple {
@@ -46,32 +54,32 @@
 }
 
 
-/* PLACEHOLDER COLOR BOOTSTRAP*/
+    /* PLACEHOLDER COLOR BOOTSTRAP*/
 
-.form-control::-webkit-input-placeholder {
-    color: #C158DC;
-    opacity: 0.7;
-}
+    .form-control::-webkit-input-placeholder {
+        color: #C158DC;
+        opacity: 0.7;
+    }
 
-.form-control::-moz-placeholder {
-    color: #C158DC;
-    opacity: 0.7;
-}
+    .form-control::-moz-placeholder {
+        color: #C158DC;
+        opacity: 0.7;
+    }
 
-.form-control:-ms-input-placeholder {
-    color: #C158DC;
-    opacity: 0.7;
-}
+    .form-control:-ms-input-placeholder {
+        color: #C158DC;
+        opacity: 0.7;
+    }
 
-.form-control::-ms-input-placeholder {
-    color: #C158DC;
-    opacity: 0.7;
-}
+    .form-control::-ms-input-placeholder {
+        color: #C158DC;
+        opacity: 0.7;
+    }
 
-.form-control::placeholder {
-    color: #C158DC;
-    opacity: 0.7;
-}
+    .form-control::placeholder {
+        color: #C158DC;
+        opacity: 0.7;
+    }
 
 
 
@@ -102,8 +110,9 @@
 
 /* BACKGROUND COLORS THEME*/
 .bg-white {
-    background-color:#FFFFFF;
+    background-color: #FFFFFF;
 }
+
 .bg-green {
     background-color: #009688;
 }

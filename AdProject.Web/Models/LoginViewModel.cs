@@ -17,6 +17,7 @@ namespace AdProject.Web.Models
         [Required]
         public string Password { get; set; }
 
-        public bool Connected { get; set; }
+        [Display(Name = "RememberMe", ResourceType = typeof(TextResource))]
+        public bool RememberMe { get; set; }
     }
 }

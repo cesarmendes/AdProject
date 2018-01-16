@@ -135,4 +135,7 @@
   <data name="Register" xml:space="preserve">
     <value>Cadastrar</value>
   </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Manter conectado</value>
+  </data>
 </root>

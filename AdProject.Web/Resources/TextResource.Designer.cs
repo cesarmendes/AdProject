@@ -113,5 +113,14 @@ namespace AdProject.Web.Resources {
                 return ResourceManager.GetString("Register", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manter conectado.
+        /// </summary>
+        public static string RememberMe {
+            get {
+                return ResourceManager.GetString("RememberMe", resourceCulture);
+            }
+        }
     }
 }

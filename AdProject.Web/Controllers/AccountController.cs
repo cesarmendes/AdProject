@@ -35,7 +35,7 @@ namespace AdProject.Web.Controllers
             {
                 if (!SignInManager.IsSignedIn(User))
                 {
-                    var result = await this.SignInManager.PasswordSignInAsync(model.Email, model.Password, model.Connected, true);
+                    var result = await this.SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, true);
 
                     if (result.Succeeded)
                     {
