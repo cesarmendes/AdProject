@@ -1,4 +1,5 @@
-﻿using AdProject.Domain.ValueObjects;
+﻿using AdProject.Domain.Entities;
+using AdProject.Domain.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Text;

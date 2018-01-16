@@ -1,4 +1,5 @@
-﻿using AdProject.Domain.Repositories;
+﻿using AdProject.Domain.Entities;
+using AdProject.Domain.Repositories;
 using AdProject.Domain.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using System;

@@ -12,17 +12,16 @@ namespace AdProject.Infrastructure.Data.Contexts.Configurations
         public void Configure(EntityTypeBuilder<Profile> builder)
         {
             builder
+                .ToTable("TBL_PROFILES", AdProjectContext.SCHEME_NAME)
                 .HasKey(profile => profile.Id);
 
             builder
-                .ToTable(ProfileTable.TABLE_NAME, ProfileTable.SCHEME_NAME);
-
-            builder
                 .Property(profile => profile.Id)
-                .HasColumnName(ProfileTable.FIELD_ID)
-                .HasColumnType(ProfileTable.TYPE_BIGINT)
-                .ValueGeneratedOnAdd();
-
+                .HasColumnName("ID")
+                .HasColumnType(AdProjectContext.TYPE_BIGINT)
+                .ValueGeneratedNever();
         }
+
+        
     }
 }

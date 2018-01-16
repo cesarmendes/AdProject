@@ -1,35 +1,138 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿.text-logo {
+    font-family: Lobster;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+
+.border-green-dark {
+    border-color: #00675B !important;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+.shadown-green-dark {
+    box-shadow: 0px 4px 5px 0px #00675B;
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
+/* BUTTONS COLOR BOOTSTRAP*/
+.btn-purple {
+    color: #fff;
+    background-color: #8E24AA;
+    border-color: #8E24AA;
 }
 
-/* QR code generator */
-#qrCode {
-    margin: 15px;
-}
-
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
+    .btn-purple:hover {
+        color: #fff;
+        background-color: #7B1FA2;
+        border-color: #7B1FA2;
     }
+
+    .btn-purple:focus, .btn-purple.focus {
+        box-shadow: 0 0 0 0.2rem rgba(123, 31, 162, 0.5);
+    }
+
+    .btn-purple.disabled, .btn-purple:disabled {
+        background-color: #E1BEE7;
+        border-color: #E1BEE7;
+    }
+
+    .btn-purple:not([disabled]):not(.disabled):active, .btn-purple:not([disabled]):not(.disabled).active,
+    .show > .btn-purple.dropdown-toggle {
+        color: #fff;
+        background-color: #6A1B9A;
+        border-color: #6A1B9A;
+    }
+
+        .btn-purple:not([disabled]):not(.disabled):active:focus, .btn-purple:not([disabled]):not(.disabled).active:focus,
+        .show > .btn-primary.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.2rem rgba(106, 27, 154, 0.5);
+        }
+
+
+
+/* FORMS COLOR BOOTSTRAP*/
+.form-control {
+    color: #5C007A;
+    border: 1px solid #009688;
+}
+
+
+    /* PLACEHOLDER COLOR BOOTSTRAP*/
+
+    .form-control::-webkit-input-placeholder {
+        color: #C158DC;
+        opacity: 0.7;
+    }
+
+    .form-control::-moz-placeholder {
+        color: #C158DC;
+        opacity: 0.7;
+    }
+
+    .form-control:-ms-input-placeholder {
+        color: #C158DC;
+        opacity: 0.7;
+    }
+
+    .form-control::-ms-input-placeholder {
+        color: #C158DC;
+        opacity: 0.7;
+    }
+
+    .form-control::placeholder {
+        color: #C158DC;
+        opacity: 0.7;
+    }
+
+
+
+/* BACKGROUND COLORS THEME*/
+.text-green {
+    color: #009688;
+}
+
+.text-green-light {
+    color: #52C7B8;
+}
+
+.text-green-dark {
+    color: #00675B;
+}
+
+.text-purple {
+    color: #8E24AA;
+}
+
+.text-purple-light {
+    color: #C158DC;
+}
+
+.text-purple-dark {
+    color: #5C007A;
+}
+
+/* BACKGROUND COLORS THEME*/
+.bg-white {
+    background-color: #FFFFFF;
+}
+
+.bg-green {
+    background-color: #009688;
+}
+
+.bg-green-light {
+    background-color: #52C7B8;
+}
+
+.bg-green-dark {
+    background-color: #00675B;
+}
+
+.bg-purple {
+    background-color: #8E24AA;
+}
+
+.bg-purple-light {
+    background-color: #C158DC;
+}
+
+.bg-purple-dark {
+    background-color: #5C007A;
 }

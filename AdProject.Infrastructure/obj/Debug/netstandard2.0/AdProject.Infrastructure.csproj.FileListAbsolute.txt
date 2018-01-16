@@ -13,7 +13,11 @@ D:\Projetos\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\AdProjec
 D:\Projetos\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\AdProject.Infrastructure.dll
 D:\Projetos\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\AdProject.Infrastructure.pdb
 D:\Projetos\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\AdProject.Domain.dll
+D:\Projetos\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Projetos\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\Microsoft.Extensions.Identity.Stores.dll
 D:\Projetos\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\AdProject.Domain.pdb
+D:\Projetos\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
+D:\Projetos\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\Microsoft.Extensions.Identity.Stores.xml
 D:\Projetos\AdProject\AdProject.Infrastructure\obj\Debug\netstandard2.0\AdProject.Infrastructure.csprojResolveAssemblyReference.cache
 D:\Projetos\AdProject\AdProject.Infrastructure\obj\Debug\netstandard2.0\AdProject.Infrastructure.csproj.CoreCompileInputs.cache
 D:\Projetos\AdProject\AdProject.Infrastructure\obj\Debug\netstandard2.0\AdProject.Infrastructure.AssemblyInfoInputs.cache
