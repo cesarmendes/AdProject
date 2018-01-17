@@ -30,19 +30,12 @@
         <hr />
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
-
-
+<link href="~/lib/iCheck/skins/square/green.css" rel="stylesheet" />
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 
 
-    <link href="~/lib/iCheck/skins/square/green.css" rel="stylesheet" />
     <script src="~/lib/iCheck/icheck.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
