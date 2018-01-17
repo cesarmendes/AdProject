@@ -9,20 +9,20 @@ namespace AdProject.Web.Models
 {
     public class RegisterViewModel
     {
+        [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(TextResource))]
         [Display(Name = "Name", ResourceType = typeof(TextResource))]
-        [Required]
         public string Name { get; set; }
 
+        [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(TextResource))]
         [Display(Name = "Email", ResourceType = typeof(TextResource))]
-        [Required]
         public string Email { get; set; }
 
+        [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(TextResource))]
         [Display(Name = "Password", ResourceType = typeof(TextResource))]
-        [Required]
         public string Password { get; set; }
 
+        [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(TextResource))]
         [Display(Name = "PasswordConfirm", ResourceType = typeof(TextResource))]
-        [Required]
         public string PasswordConfirm { get; set; }
 
         public bool TermAccepted { get; set; }
