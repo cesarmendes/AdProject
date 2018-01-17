@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;
+using AutoMapper;
 
 namespace AdProject.Web
 {
@@ -57,7 +58,7 @@ namespace AdProject.Web
                     options.LoginPath = "/Account/Login";
                 });
 
-
+            services.AddAutoMapper();
             services.AddMvc();
         }
 

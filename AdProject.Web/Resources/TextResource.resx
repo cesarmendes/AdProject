@@ -138,4 +138,7 @@
   <data name="RememberMe" xml:space="preserve">
     <value>Manter conectado</value>
   </data>
+  <data name="RequiredField" xml:space="preserve">
+    <value>Campo obrigatório</value>
+  </data>
 </root>

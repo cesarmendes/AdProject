@@ -23,6 +23,7 @@
             <div class="form-group">
                 <input type="checkbox" asp-for="RememberMe"/>
                 <label asp-for="RememberMe" class="text-purple" ></label>
+                <span asp-validation-for="RememberMe" class="text-danger"></span>
                 <input type="submit" value="@TextResource.Login" class="btn btn-purple float-right" />
             </div>
         </form>
@@ -42,7 +43,7 @@
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 
 
-    <link href="~/lib/iCheck/skins/square/green.css" rel="stylesheet" />
+    @*<link href="~/lib/iCheck/skins/square/green.css" rel="stylesheet" />
     <script src="~/lib/iCheck/icheck.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -52,5 +53,5 @@
                 increaseArea: '20%' // optional
             });
         });
-    </script>
+    </script>*@
 }

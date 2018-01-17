@@ -122,5 +122,14 @@ namespace AdProject.Web.Resources {
                 return ResourceManager.GetString("RememberMe", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Campo obrigatório.
+        /// </summary>
+        public static string RequiredField {
+            get {
+                return ResourceManager.GetString("RequiredField", resourceCulture);
+            }
+        }
     }
 }
