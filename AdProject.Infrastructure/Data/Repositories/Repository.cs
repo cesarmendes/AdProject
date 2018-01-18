@@ -4,12 +4,13 @@ using AdProject.Domain.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace AdProject.Infrastructure.Data.Repositories
 {
-    public class Repository<TKey, TEntity> : IRepository<TKey, TEntity>
+    public abstract class Repository<TKey, TEntity> : IRepository<TKey, TEntity>
         where TKey : struct
         where TEntity : Entity<TKey>
     {
@@ -64,6 +65,20 @@ namespace AdProject.Infrastructure.Data.Repositories
         public Task<int> CommitAsync()
         {
             return this.Context.SaveChangesAsync();
+        }
+
+        public Page<TKey, TEntity> Search()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected Page<TKey, TEntity> Paging(int actual, IQueryable<TEntity> query)
+        {
+            query.LongCount();
+
+            query.Skip(10).Take(10).ToListAsync();
+
+                      throw new NotImplementedException();
         }
     }
 }

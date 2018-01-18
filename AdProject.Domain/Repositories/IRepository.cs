@@ -15,6 +15,8 @@ namespace AdProject.Domain.Repositories
 
         Task<TEntity> GetAsync(TKey id);
 
+        Page<TKey,TEntity> Search();
+
         void Insert(TEntity entity);
 
         void Update(TEntity entity);
