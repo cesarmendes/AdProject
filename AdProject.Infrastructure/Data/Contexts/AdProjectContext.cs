@@ -29,14 +29,17 @@ namespace AdProject.Infrastructure.Data.Contexts
         {
         }
 
+        public DbSet<Category> Categories { get; set; }
         public DbSet<Profile> Profiles { get; set; }
+        public DbSet<SubCategory> SubCategories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 
-
+            builder.ApplyConfiguration<Category>(new CategoryConfig());
             builder.ApplyConfiguration<Profile>(new AdProfileConfig());
+            builder.ApplyConfiguration<SubCategory>(new SubCategoryConfig());
 
 
             //Asp.Net Identity configuration
