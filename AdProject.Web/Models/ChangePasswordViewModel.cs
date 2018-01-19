@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace AdProject.Web.Models
 {
-    public class LoginViewModel
+    public class ChangePasswordViewModel
     {
         [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(TextResource))]
-        [Display(Name = "Email", ResourceType = typeof(TextResource))]
-        public string Email { get; set; }
+        [Display(Name = "Password", ResourceType = typeof(TextResource))]
+        public string PasswordOld { get; set; }
 
         [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(TextResource))]
         [Display(Name = "Password", ResourceType = typeof(TextResource))]
         public string Password { get; set; }
 
-        [Range(typeof(bool),"false", "false", ErrorMessage = "Assine")]
-        [Display(Name = "RememberMe", ResourceType = typeof(TextResource))]
-        public bool RememberMe { get; set; }
+        [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(TextResource))]
+        [Display(Name = "PasswordConfirm", ResourceType = typeof(TextResource))]
+        public string PasswordConfirm { get; set; }
     }
 }

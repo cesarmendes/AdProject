@@ -22,6 +22,41 @@ namespace AdProject.Web.Controllers
             this.SignInManager = signInManager;
         }
 
+        public IActionResult ChangePassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var id = UserManager.GetUserId(User);
+                    var user = await UserManager.FindByIdAsync(id);
+
+                    if (user != null)
+                    {
+                        var result = await UserManager.ChangePasswordAsync(user,model.PasswordOld, model.Password);
+
+                        if (result.Succeeded)
+                        {
+
+                        }
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+            return View();
+        }
 
         public IActionResult Login()
         {
