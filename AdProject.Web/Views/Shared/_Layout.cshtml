@@ -58,7 +58,7 @@
                         @if (SignInManager.IsSignedIn(User))
                     {
                             <li class="nav-item">
-
+                                <a class="nav-link text-white" asp-area="" asp-controller="Account" asp-action="ChangePassword" data-toggle="tooltip" data-placement="bottom" title="Configurações"><span class="fa fa-key"></span></a>
                             </li>
                             <li class="nav-item">
                                     <a class="nav-link text-white" asp-area="" asp-controller="Account" asp-action="Logoff"><img src="~/images/bmw-2964072_1280.jpg" class="rounded-circle" style="width:35px;height:35px;" /></a>

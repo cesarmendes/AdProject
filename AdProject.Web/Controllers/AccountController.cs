@@ -43,7 +43,6 @@ namespace AdProject.Web.Controllers
 
                         if (result.Succeeded)
                         {
-
                         }
                     }
 
