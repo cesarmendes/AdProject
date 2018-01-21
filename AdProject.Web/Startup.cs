@@ -95,6 +95,11 @@ namespace AdProject.Web
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                     name: "areas",
+                     template: "{area:exists}/{controller=Site}/{action=Index}/{id?}"
+                   );
+
+                routes.MapRoute(
                     name: "default",
                     template: "{controller=Site}/{action=Index}/{id?}");
             });
