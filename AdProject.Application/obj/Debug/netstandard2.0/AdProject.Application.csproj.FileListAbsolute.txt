@@ -14,4 +14,3 @@ D:\Projetos\AdProject\AdProject.Application\obj\Debug\netstandard2.0\AdProject.A
 D:\Projetos\AdProject\AdProject.Application\obj\Debug\netstandard2.0\AdProject.Application.AssemblyInfo.cs
 D:\Projetos\AdProject\AdProject.Application\obj\Debug\netstandard2.0\AdProject.Application.dll
 D:\Projetos\AdProject\AdProject.Application\obj\Debug\netstandard2.0\AdProject.Application.pdb
-D:\Projetos\AdProject\AdProject.Application\obj\Debug\netstandard2.0\AdProject.Application.csprojResolveAssemblyReference.cache

@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace AdProject.Infrastructure.Data.Contexts.Configurations
 {
-    internal class AdProfileConfig : IEntityTypeConfiguration<Profile>
+    public class ProfileConfig : IEntityTypeConfiguration<Profile>
     {
         public void Configure(EntityTypeBuilder<Profile> builder)
         {

@@ -29,8 +29,12 @@ namespace AdProject.Infrastructure.Data.Contexts
         {
         }
 
+        public DbSet<Announcement> Announcements { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<Country> Countries { get; set; }
         public DbSet<Profile> Profiles { get; set; }
+        public DbSet<State> States { get; set; }
         public DbSet<SubCategory> SubCategories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -38,7 +42,7 @@ namespace AdProject.Infrastructure.Data.Contexts
             base.OnModelCreating(builder);
 
             builder.ApplyConfiguration<Category>(new CategoryConfig());
-            builder.ApplyConfiguration<Profile>(new AdProfileConfig());
+            builder.ApplyConfiguration<Profile>(new ProfileConfig());
             builder.ApplyConfiguration<SubCategory>(new SubCategoryConfig());
 
 

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "4e3f117dcdd38747c002203f10ec5d8c008cf201"
+    "signature": "92744c7dee0eea3ff99fea90d580975a21ef4351"
   },
   "compilationOptions": {},
   "targets": {
@@ -11,7 +11,6 @@
         "dependencies": {
           "AdProject.Domain": "1.0.0",
           "AutoMapper": "6.2.2",
-          "Microsoft.AspNet.Identity.Core": "2.2.1",
           "Microsoft.EntityFrameworkCore.Tools": "2.0.1",
           "NETStandard.Library": "2.0.1",
           "Newtonsoft.Json": "10.0.3",
@@ -39,11 +38,6 @@
         },
         "runtime": {
           "lib/netstandard1.3/AutoMapper.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Identity.Core/2.2.1": {
-        "runtime": {
-          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {}
         }
       },
       "Microsoft.CSharp/4.4.0": {
@@ -738,13 +732,6 @@
       "sha512": "sha512-eGKcnJdoF5rYMWPUaSPtlWdvua9xw4hnQN5kM/X4AXLGKghrtPIaMv+RYoA3sj0kyZ3X6wZ1Qj67F+u0pCCPaw==",
       "path": "automapper/6.2.2",
       "hashPath": "automapper.6.2.2.nupkg.sha512"
-    },
-    "Microsoft.AspNet.Identity.Core/2.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-jjurNglpmcv0SLBd4Fmar8ZoJ2yqfTf6iuP3p8wVH7Nvanfo8l3qTBzq3qRQz2BQlb6iXJiDWPjcnIImVz512g==",
-      "path": "microsoft.aspnet.identity.core/2.2.1",
-      "hashPath": "microsoft.aspnet.identity.core.2.2.1.nupkg.sha512"
     },
     "Microsoft.CSharp/4.4.0": {
       "type": "package",
