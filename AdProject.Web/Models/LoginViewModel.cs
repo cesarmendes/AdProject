@@ -9,6 +9,7 @@ namespace AdProject.Web.Models
 {
     public class LoginViewModel
     {
+        [EmailAddress]
         [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(TextResource))]
         [Display(Name = "Email", ResourceType = typeof(TextResource))]
         public string Email { get; set; }
@@ -17,7 +18,6 @@ namespace AdProject.Web.Models
         [Display(Name = "Password", ResourceType = typeof(TextResource))]
         public string Password { get; set; }
 
-        [Range(typeof(bool),"false", "false", ErrorMessage = "Assine")]
         [Display(Name = "RememberMe", ResourceType = typeof(TextResource))]
         public bool RememberMe { get; set; }
     }

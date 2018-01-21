@@ -15,7 +15,6 @@ namespace AdProject.Web.Controllers
         private UserManager<AppUser> UserManager { get; set; }
         public SignInManager<AppUser> SignInManager { get; set; }
 
-
         public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
         {
             this.UserManager = userManager;

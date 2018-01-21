@@ -13,6 +13,7 @@ namespace AdProject.Web.Models
         [Display(Name = "Name", ResourceType = typeof(TextResource))]
         public string Name { get; set; }
 
+        [EmailAddress]
         [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(TextResource))]
         [Display(Name = "Email", ResourceType = typeof(TextResource))]
         public string Email { get; set; }

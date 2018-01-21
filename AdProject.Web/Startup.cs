@@ -29,7 +29,10 @@ namespace AdProject.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<IdentityContext>(options => options.UseSqlServer(Configuration.GetConnectionString("dbconexao")));
+            services.AddDbContext<AdProjectContext>(options => 
+                options.UseSqlServer(Configuration.GetConnectionString("dbconexao"), 
+                optionBuilder => optionBuilder.MigrationsAssembly("AdProject.Infrastructure")));
+
             services.AddDbContext<AdProjectContext>(option =>
                 option.UseNpgsql(Configuration.GetConnectionString("dbconexaopg"),
                 optionBuilder => optionBuilder.MigrationsAssembly("AdProject.Infrastructure")));
