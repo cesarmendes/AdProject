@@ -1,4 +1,9 @@
-﻿.text-logo {
+﻿body{
+    padding-top:67px;
+}
+
+
+.text-logo {
     font-family: Lobster;
 }
 
@@ -11,7 +16,31 @@
     box-shadow: 0px 4px 5px 0px #00675B;
 }
 
+
 /* BUTTONS COLOR BOOTSTRAP*/
+.btn-link-purple {
+    font-weight: 400;
+    color: #8E24AA;
+    background-color: transparent;
+}
+
+    .btn-link-purple:hover {
+        color: #7B1FA2;
+        text-decoration: underline;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    .btn-link-purple:focus, .btn-link.focus {
+        text-decoration: underline;
+        border-color: transparent;
+        box-shadow: none;
+    }
+
+    .btn-link-purple:disabled, .btn-link-purple.disabled {
+        color: #E1BEE7;
+    }
+
 .btn-purple {
     color: #fff;
     background-color: #8E24AA;

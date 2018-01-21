@@ -3,11 +3,11 @@
     ViewData["Title"] = "Lockout";
 }
 
-@section beforecontainer{
-    @Html.Partial("~/Views/_HeaderLogo.cshtml")
-}
+@Html.Partial("~/Views/_HeaderLogo.cshtml")
 
+<div class="container">
+    <h4 class="text-center">
+        Esta conta foi bloqueada por exceder as tentativas de login, por favor tente mais tarde
+    </h4>
+</div>
 
-<h4 class="text-center">
-    Esta conta foi bloqueada por exceder as tentativas de login, por favor tente mais tarde
-</h4>

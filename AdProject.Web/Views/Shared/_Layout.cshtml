@@ -34,7 +34,7 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-green shadown-green-dark">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-green shadown-green-dark">
         <a class="navbar-brand text-white ml-3" asp-controller="Site" asp-action="Index">
             <span class="fa fa-amazon fa-2x"></span>
         </a>
@@ -65,14 +65,14 @@
                             <li class="dropdown-item">
                                 <img src="~/images/bmw-2964072_1280.jpg" class="rounded mx-auto d-block" style="width:100px;" />
                                 <span>Cesar Mendes da Silva</span>
-                                <a href="#">Action</a>
+                                <a href="#" class="btn-link-purple">Action</a>
                             </li>
                             <li class="dropdown-item">
-                                <a href="#">Another action</a>
+                                <a href="#" class="btn-link-purple">Another action</a>
                             </li>
                             <li class="dropdown-divider"></li>
                             <li class="dropdown-item">
-                                <a href="#">Something else here</a>
+                                <a href="#" class="btn-link-purple">Something else here</a>
                             </li>
                         </ul>
                     </li>
@@ -82,17 +82,17 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <li class="dropdown-header">
-                                <h3>Informação Usuário</h3>
+                                <h3>Informação</h3>
                             </li>
                             <li class="dropdown-item">
-                                <a href="#"><span class="fa fa-user"></span> Perfil</a>
+                                <a href="#" class="btn-link-purple"><span class="fa fa-user"></span> Meu perfil</a>
                             </li>
                             <li class="dropdown-item">
-                                <a href="#"><span class="fa fa-lock"></span> Alterar senha</a>
+                                <a asp-action="ChangePassword" asp-controller="Account" class="btn-link-purple"><span class="fa fa-lock"></span> Alterar senha</a>
                             </li>
                             <li class="dropdown-divider"></li>
                             <li class="dropdown-item">
-                                <a href="#">Something else here</a>
+                                <a href="#" class="btn-link-purple">Something else here</a>
                             </li>
                         </ul>
                     </li>
@@ -116,13 +116,11 @@
             </ul>
         </div>
     </nav>
-    <div class="col-xl-12 mt-1" style="min-height:65vh">
-        @RenderSection("beforecontainer", false)
+    <div class="col-12 mt-1" style="min-height:65vh">
         @RenderBody()
     </div>
-    <footer class="bg-green col-xl-12">
-        @*<div class="container">*@
-        <div class="row justify-content-center">
+    <footer class="col-12 mt-3">
+        <div class="row bg-green">
             <div class="col-md-3 col-lg-3 col-xl-3">
                 <h4 class="text-white mt-3">Aplicativos</h4>
                 <hr class="bg-white" />
@@ -179,7 +177,6 @@
                 </ul>
             </div>
         </div>
-        @*</div>*@
         <div class="row bg-green-dark">
             <div class="col-xl-12 text-center">
                 <span class="text-white font-weight-light">
