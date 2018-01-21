@@ -31,7 +31,7 @@
     <Folder Include="Areas\Management\Data\" />
     <Folder Include="Areas\Management\Models\" />
     <Folder Include="Areas\Management\Views\" />
-    <Folder Include="Models\NewFolder\" />
+    <Folder Include="Models\Account\" />
     <Folder Include="AutoMapper\" />
   </ItemGroup>
 

@@ -12,7 +12,7 @@ namespace AdProject.Infrastructure.Data.Contexts.Configurations
         public void Configure(EntityTypeBuilder<SubCategory> builder)
         {
             builder
-                .ToTable("TBL_CATEGORIES", AdProjectContext.SCHEME_NAME)
+                .ToTable("TBL_SUBCATEGORIES", AdProjectContext.SCHEME_NAME)
                 .HasKey(subCategory => subCategory.Id);
 
             builder

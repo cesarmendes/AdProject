@@ -22,6 +22,7 @@ namespace AdProject.Web.Controllers
             this.SignInManager = signInManager;
         }
 
+        [HttpGet]
         public IActionResult ChangePassword()
         {
             return View();
@@ -57,6 +58,33 @@ namespace AdProject.Web.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var user = await UserManager.FindByNameAsync(model.Email);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
+            return View();
+        }
+
+        [HttpGet]
         public IActionResult Login()
         {
             return View();
@@ -97,17 +125,20 @@ namespace AdProject.Web.Controllers
             return View();
         }
 
+        [HttpGet]
         public async Task<IActionResult> Logoff()
         {
             await this.SignInManager.SignOutAsync();
             return RedirectToAction("Index", "Site");
         }
 
+        [HttpGet]
         public IActionResult Lockout()
         {
             return View();
         }
 
+        [HttpGet]
         public IActionResult Register()
         {
             return View();

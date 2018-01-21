@@ -13304,6 +13304,7 @@
   },
   "packageFolders": {
     "C:\\Users\\cesar\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -13319,11 +13320,13 @@
       "outputPath": "D:\\Projetos\\AdProject\\AdProject.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\cesar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -13338,11 +13341,11 @@
             "D:\\Projetos\\AdProject\\AdProject.Infrastructure\\AdProject.Infrastructure.csproj": {
               "projectPath": "D:\\Projetos\\AdProject\\AdProject.Infrastructure\\AdProject.Infrastructure.csproj"
             },
-            "D:\\Projetos\\AdProject\\AdProject.Application\\AdProject.Application.csproj": {
-              "projectPath": "D:\\Projetos\\AdProject\\AdProject.Application\\AdProject.Application.csproj"
-            },
             "D:\\Projetos\\AdProject\\AdProject.Domain\\AdProject.Domain.csproj": {
               "projectPath": "D:\\Projetos\\AdProject\\AdProject.Domain\\AdProject.Domain.csproj"
+            },
+            "D:\\Projetos\\AdProject\\AdProject.Application\\AdProject.Application.csproj": {
+              "projectPath": "D:\\Projetos\\AdProject\\AdProject.Application\\AdProject.Application.csproj"
             }
           }
         }
@@ -13356,30 +13359,30 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Npgsql.EntityFrameworkCore.PostgreSQL": {
-            "target": "Package",
-            "version": "2.0.1"
-          },
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
-            "version": "3.2.0"
-          },
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-            "target": "Package",
-            "version": "2.0.2"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "2.0",
-            "autoReferenced": true
+            "version": "[3.2.0, )"
           },
           "Microsoft.AspNet.Identity.Core": {
             "target": "Package",
-            "version": "2.2.1"
+            "version": "[2.2.1, )"
           },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "2.0.5"
+            "version": "[2.0.5, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
+          },
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+            "target": "Package",
+            "version": "[2.0.2, )"
+          },
+          "Npgsql.EntityFrameworkCore.PostgreSQL": {
+            "target": "Package",
+            "version": "[2.0.1, )"
           }
         },
         "imports": [

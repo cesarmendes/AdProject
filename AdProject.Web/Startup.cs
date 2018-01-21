@@ -35,7 +35,7 @@ namespace AdProject.Web
                 optionBuilder => optionBuilder.MigrationsAssembly("AdProject.Infrastructure")));
 
             services
-                .AddIdentity<Infrastructure.Identity.AppUser, Infrastructure.Identity.AppRole>(option =>
+                .AddIdentity<AppUser, AppRole>(option =>
                 {
                     option.Lockout.AllowedForNewUsers = true;
                     option.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
