@@ -17,8 +17,71 @@ namespace AdProject.Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
-                .HasAnnotation("ProductVersion", "2.0.1-rtm-125");
+                .HasAnnotation("ProductVersion", "2.0.1-rtm-125")
+                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("AdProject.Domain.Entities.Announcement", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<decimal>("Price");
+
+                    b.Property<decimal?>("PricePrevious");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Announcements");
+                });
+
+            modelBuilder.Entity("AdProject.Domain.Entities.Category", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("ID")
+                        .HasColumnType("BIGINT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnName("NAME")
+                        .HasColumnType("VARCHAR(300)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TBL_CATEGORIES","dbo");
+                });
+
+            modelBuilder.Entity("AdProject.Domain.Entities.City", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("IdState");
+
+                    b.Property<string>("Name");
+
+                    b.Property<int?>("StateId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StateId");
+
+                    b.ToTable("Cities");
+                });
+
+            modelBuilder.Entity("AdProject.Domain.Entities.Country", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Countries");
+                });
 
             modelBuilder.Entity("AdProject.Domain.Entities.Profile", b =>
                 {
@@ -31,6 +94,44 @@ namespace AdProject.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TBL_PROFILES","dbo");
+                });
+
+            modelBuilder.Entity("AdProject.Domain.Entities.State", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int?>("CountryId");
+
+                    b.Property<int>("IdCountry");
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CountryId");
+
+                    b.ToTable("States");
+                });
+
+            modelBuilder.Entity("AdProject.Domain.Entities.SubCategory", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("ID")
+                        .HasColumnType("BIGINT");
+
+                    b.Property<long>("IdCategory");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnName("VARCHAR(300)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdCategory");
+
+                    b.ToTable("TBL_SUBCATEGORIES","dbo");
                 });
 
             modelBuilder.Entity("AdProject.Infrastructure.Identity.AppRole", b =>
@@ -51,7 +152,8 @@ namespace AdProject.Infrastructure.Migrations
 
                     b.HasIndex("NormalizedName")
                         .IsUnique()
-                        .HasName("RoleNameIndex");
+                        .HasName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("TBL_ROLES","dbo");
                 });
@@ -119,7 +221,8 @@ namespace AdProject.Infrastructure.Migrations
 
                     b.HasIndex("NormalizedUserName")
                         .IsUnique()
-                        .HasName("UserNameIndex");
+                        .HasName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("TBL_USERS","dbo");
                 });
@@ -187,11 +290,33 @@ namespace AdProject.Infrastructure.Migrations
                     b.ToTable("TBL_USER_TOKENS","dbo");
                 });
 
+            modelBuilder.Entity("AdProject.Domain.Entities.City", b =>
+                {
+                    b.HasOne("AdProject.Domain.Entities.State", "State")
+                        .WithMany("Cities")
+                        .HasForeignKey("StateId");
+                });
+
             modelBuilder.Entity("AdProject.Domain.Entities.Profile", b =>
                 {
                     b.HasOne("AdProject.Infrastructure.Identity.AppUser")
                         .WithOne("Profile")
                         .HasForeignKey("AdProject.Domain.Entities.Profile", "Id")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("AdProject.Domain.Entities.State", b =>
+                {
+                    b.HasOne("AdProject.Domain.Entities.Country", "Country")
+                        .WithMany("States")
+                        .HasForeignKey("CountryId");
+                });
+
+            modelBuilder.Entity("AdProject.Domain.Entities.SubCategory", b =>
+                {
+                    b.HasOne("AdProject.Domain.Entities.Category", "Category")
+                        .WithMany("SubCategories")
+                        .HasForeignKey("IdCategory")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

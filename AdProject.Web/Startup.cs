@@ -33,9 +33,9 @@ namespace AdProject.Web
                 options.UseSqlServer(Configuration.GetConnectionString("dbconexao"), 
                 optionBuilder => optionBuilder.MigrationsAssembly("AdProject.Infrastructure")));
 
-            services.AddDbContext<AdProjectContext>(option =>
-                option.UseNpgsql(Configuration.GetConnectionString("dbconexaopg"),
-                optionBuilder => optionBuilder.MigrationsAssembly("AdProject.Infrastructure")));
+            //services.AddDbContext<AdProjectContext>(option =>
+            //    option.UseNpgsql(Configuration.GetConnectionString("dbconexaopg"),
+            //    optionBuilder => optionBuilder.MigrationsAssembly("AdProject.Infrastructure")));
 
             services
                 .AddIdentity<AppUser, AppRole>(option =>
@@ -59,6 +59,7 @@ namespace AdProject.Web
                 .ConfigureApplicationCookie(options =>
                 {
                     options.LoginPath = "/Account/Login";
+                    options.LogoutPath = "/Account/Logout";
                 });
 
             services.AddAutoMapper();

@@ -5099,6 +5099,7 @@
         "dependencies": {
           "AdProject.Domain": "1.0.0",
           "AutoMapper": "6.2.2",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.0.1",
           "Microsoft.EntityFrameworkCore.Tools": "2.0.1",
           "Newtonsoft.Json": "10.0.3",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "2.0.1"

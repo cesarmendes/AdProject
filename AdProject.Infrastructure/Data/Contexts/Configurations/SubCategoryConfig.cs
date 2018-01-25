@@ -18,14 +18,15 @@ namespace AdProject.Infrastructure.Data.Contexts.Configurations
             builder
                 .Property(subCategory => subCategory.Id)
                 .HasColumnName("ID")
-                .HasColumnType("BIGINT")
+                .HasColumnType(AdProjectContext.TYPE_BIGINT)
                 .ValueGeneratedOnAdd();
 
             builder
                 .Property(subCategory => subCategory.Name)
                 .HasColumnName("NAME")
-                .HasColumnType("VARCHAR")
-                .HasMaxLength(300)
+                .HasColumnName("VARCHAR(300)")
+                //.HasColumnType(AdProjectContext.TYPE_STRING)
+                //.HasMaxLength(300)
                 .IsRequired();
 
             builder

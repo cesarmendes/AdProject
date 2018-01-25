@@ -14,6 +14,7 @@ namespace AdProject.Infrastructure.Data.Contexts
         public static readonly string SCHEME_NAME = "dbo";
         public static readonly string TYPE_INT = "INT";
         public static readonly string TYPE_BIGINT = "BIGINT";
+        public static readonly string TYPE_DECIMAL = "DECIMAL";
         public static readonly string TYPE_BOOL = "BIT";
         public static readonly string TYPE_STRING = "VARCHAR";
         public static readonly string TYPE_TEXT = "TEXT";
