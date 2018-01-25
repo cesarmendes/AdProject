@@ -82,7 +82,7 @@ namespace AdProject.Web
             }
             else
             {
-                app.UseExceptionHandler("/Site/Error");
+                app.UseExceptionHandler(new ExceptionHandlerOptions() { });
             }
 
             app.UseRequestLocalization(new RequestLocalizationOptions()

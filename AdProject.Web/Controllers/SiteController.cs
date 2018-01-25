@@ -8,14 +8,18 @@ using AdProject.Web.Models;
 
 namespace AdProject.Web.Controllers
 {
+
     public class SiteController : Controller
     {
+        [Route("/")]
+        [Route(nameof(Index))]
         public IActionResult Index()
         {
 
             return View();
         }
 
+        [Route(nameof(About))]
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
@@ -23,6 +27,7 @@ namespace AdProject.Web.Controllers
             return View();
         }
 
+        [Route(nameof(Contact))]
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
@@ -30,6 +35,7 @@ namespace AdProject.Web.Controllers
             return View();
         }
 
+        [Route(nameof(Error))]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
