@@ -61,6 +61,15 @@ namespace AdProject.Web.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Alterar.
+        /// </summary>
+        public static string Change {
+            get {
+                return ResourceManager.GetString("Change", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to E-mail.
         /// </summary>
         public static string Email {
@@ -102,6 +111,15 @@ namespace AdProject.Web.Resources {
         public static string PasswordConfirm {
             get {
                 return ResourceManager.GetString("PasswordConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Senha atual.
+        /// </summary>
+        public static string PasswordCurrent {
+            get {
+                return ResourceManager.GetString("PasswordCurrent", resourceCulture);
             }
         }
         

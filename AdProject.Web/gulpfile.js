@@ -32,7 +32,8 @@ var pathMove = [
     path.node + "/jquery-validation-unobtrusive/**/*",
     path.node + "/popper.js/**/*",
     path.node + "/sweetalert2/**/*",
-    path.node + "/vue/**/*"
+    path.node + "/vue/**/*",
+    path.node + "/vue-resource/**/*"
 ];
 
 

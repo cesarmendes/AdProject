@@ -8,11 +8,6 @@ using AdProject.Web.Models;
 
 namespace AdProject.Web.Controllers
 {
-    public class Gambi
-    {
-
-    }
-
     public class SiteController : Controller
     {
         public IActionResult Index()

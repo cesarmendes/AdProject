@@ -7,9 +7,11 @@ using AdProject.Web.Models;
 using AdProject.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using AdProject.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AdProject.Web.Controllers
 {
+    [AllowAnonymous]
     public class AccountController : Controller
     {
         private UserManager<AppUser> UserManager { get; set; }
@@ -21,12 +23,14 @@ namespace AdProject.Web.Controllers
             this.SignInManager = signInManager;
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult ChangePassword()
         {
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
@@ -40,10 +44,11 @@ namespace AdProject.Web.Controllers
 
                     if (user != null)
                     {
-                        var result = await UserManager.ChangePasswordAsync(user,model.PasswordOld, model.Password);
+                        var result = await UserManager.ChangePasswordAsync(user,model.PasswordCurrent, model.Password);
 
                         if (result.Succeeded)
                         {
+
                         }
                     }
 

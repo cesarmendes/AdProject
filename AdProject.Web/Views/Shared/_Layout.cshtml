@@ -20,7 +20,9 @@
         <script src="~/lib/jquery/dist/jquery.js" type="text/javascript"></script>
         <script src="~/lib/popper.js/dist/umd/popper.js" type="text/javascript"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
-        <script src="~/js/site.js"></script>
+        <script src="~/lib/vue/dist/vue.js" type="text/javascript"></script>
+        @*<script src="~/lib/vue-resource/dist/vue-resource.js" type="text/javascript"></script>
+            <script src="~/js/site.js"></script>*@
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />
@@ -30,8 +32,12 @@
         <script src="~/lib/jquery/dist/jquery.min.js" type="text/javascript" asp-append-version="true"></script>
         <script src="~/lib/popper.js/dist/umd/popper.min.js" type="text/javascript" asp-append-version="true"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" asp-append-version="true"></script>
-        <script src="~/js/site.min.js" type="text/javascript" asp-append-version="true"></script>
+        <script src="~/lib/vue/dist/vue.min.js" type="text/javascript" asp-append-version="true"></script>
+        @*<script src="~/lib/vue-resource/dist/vue-resource.min.js" type="text/javascript" asp-append-version="true"></script>
+            <script src="~/js/site.min.js" type="text/javascript" asp-append-version="true"></script>*@
     </environment>
+
+    <script src="~/js/main.js"></script>
 </head>
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-green shadown-green-dark">
@@ -80,19 +86,19 @@
                         <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="fa fa-user-circle-o"></span>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdown">
                             <li class="dropdown-header">
                                 <h3>Informação</h3>
                             </li>
                             <li class="dropdown-item">
-                                <a href="#" class="btn-link-purple"><span class="fa fa-user"></span> Meu perfil</a>
+                                <a asp-action="Index" asp-controller="Profile" class="btn-link-purple">Meu perfil</a>
                             </li>
                             <li class="dropdown-item">
-                                <a asp-action="ChangePassword" asp-controller="Account" class="btn-link-purple"><span class="fa fa-lock"></span> Alterar senha</a>
+                                <a asp-action="ChangePassword" asp-controller="Account" class="btn-link-purple">Alterar senha</a>
                             </li>
                             <li class="dropdown-divider"></li>
                             <li class="dropdown-item">
-                                <a href="#" class="btn-link-purple">Something else here</a>
+                                <a asp-action="Logoff" asp-controller="Account" class="btn-link-purple">Sair&nbsp;<span class="fa fa-sign-out"></span></a>
                             </li>
                         </ul>
                     </li>
@@ -116,9 +122,10 @@
             </ul>
         </div>
     </nav>
-    <div class="col-12 mt-1" style="min-height:65vh">
+    <div id="test" class="col-12 mt-1" style="min-height:65vh">
         @RenderBody()
     </div>
+
     <footer class="col-12 mt-3">
         <div class="row bg-green">
             <div class="col-md-3 col-lg-3 col-xl-3">
@@ -190,6 +197,13 @@
         $(function () {
             $('[data-toggle="tooltip"]').tooltip();
         })
+        var vue = new Vue({
+            el: '#test',
+            mounted: function ()
+            {
+                Vue.http.get('/Site/Index').then(function (response) { console.log(response) }, function (error) { console.log(error) });
+            }
+        });
     </script>
 
     @RenderSection("Scripts", required: false)
