@@ -9,11 +9,21 @@
   "author": "Cesar Mendes da Silva",
   "license": "ISC",
   "dependencies": {
+    "animate.css": "^3.5.2",
+    "bootstrap": "^4.0.0",
+    "icheck": "^1.0.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "jquery-validation": "^1.17.0",
+    "jquery-validation-unobtrusive": "^3.2.6",
+    "popper.js": "^1.12.9",
+    "sweetalert2": "^7.6.3",
     "vue": "^2.5.13"
   },
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^3.9.1",
+    "gulp-util": "^3.0.8",
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.2.0",
     "gulp-htmlmin": "^4.0.0",

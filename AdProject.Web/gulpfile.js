@@ -2,6 +2,7 @@
 "use strict";
 
 var gulp = require("gulp"),
+    gulpu = require("gulp-util"),
     concat = require("gulp-concat"),
     cssmin = require("gulp-cssmin"),
     htmlmin = require("gulp-htmlmin"),
@@ -9,10 +10,6 @@ var gulp = require("gulp"),
     merge = require("merge-stream"),
     del = require("del"),
     bundleconfig = require("./bundleconfig.json");
-var path = {
-    node: 'node_modules/',
-    root: './wwwroot/libs/'
-};
 
 var regex = {
     css: /\.css$/,
@@ -20,11 +17,30 @@ var regex = {
     js: /\.js$/
 };
 
+var path = {
+    node: 'node_modules',
+    libs: 'wwwroot/lib'
+};
+
+var pathMove = [
+    path.node + "/animate.css/**/*",
+    path.node + "/bootstrap/**/*",
+    path.node + "/icheck/**/*",
+    path.node + "/font-awesome/**/*",
+    path.node + "/jquery/**/*",
+    path.node + "/jquery-validation/**/*",
+    path.node + "/jquery-validation-unobtrusive/**/*",
+    path.node + "/popper.js/**/*",
+    path.node + "/sweetalert2/**/*",
+    path.node + "/vue/**/*"
+];
+
+
 gulp.task("min", ["min:js", "min:css", "min:html"]);
 
 gulp.task("min:js", function () {
     var tasks = getBundles(regex.js).map(function (bundle) {
-        return gulp.src(bundle.inputFiles, { base: "." })
+        return gulp.src(bundle.inputFiles)
             .pipe(concat(bundle.outputFileName))
             .pipe(uglify())
             .pipe(gulp.dest("."));
@@ -74,17 +90,20 @@ gulp.task("watch", function () {
     });
 });
 
-
 //Move VueJs para libs
-gulp.task("move:vue", function ()
-{
-    gulp.src(path.node + '/vue/dist/*.js')
-        .pipe(gulp.dest(path.root + 'vue/'));
+gulp.task('move:packages', function () {
+    gulp.src(pathMove, { base: path.node })
+        .pipe(gulp.dest(path.libs));
 });
-
 
 function getBundles(regexPattern) {
     return bundleconfig.filter(function (bundle) {
         return regexPattern.test(bundle.outputFileName);
     });
 }
+
+gulp.task('logs', function ()
+{
+    gulpu.log(path);
+    gulpu.log(pathMove);
+});

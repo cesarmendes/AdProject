@@ -1,46 +1,84 @@
 {
-  "name": "popperjs-monorepo",
-  "version": "0.0.0",
-  "license": "MIT",
-  "private": true,
-  "devDependencies": {
-    "bundlesize": "^0.15.3",
-    "jsdoc-to-markdown": "^3.0.0",
-    "lcov-result-merger": "^1.2.0",
-    "lerna": "^2.2.0",
-    "lint-staged": "^4.0.1",
-    "pre-commit": "^1.2.2",
-    "prettier-eslint-cli": "^4.1.1",
-    "wait-on": "^2.0.2",
-    "which-pm-runs-cli": "^1.0.4"
+  "_from": "popper.js",
+  "_id": "popper.js@1.12.9",
+  "_inBundle": false,
+  "_integrity": "sha1-DfvC3/lsRRuzMu3Pz6r1ZtMx1bM=",
+  "_location": "/popper.js",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "popper.js",
+    "name": "popper.js",
+    "escapedName": "popper.js",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
-  "scripts": {
-    "postinstall": "which-pm-runs --is yarn",
-    "precommit": "lint-staged",
-    "test": "lerna run --parallel test",
-    "test:dev": "lerna run --parallel test:dev",
-    "build": "lerna run build",
-    "docs": "yarn build && for dest in popper tooltip; do jsdoc2md ./packages/$dest/dist/$dest.js > ./docs/_includes/$dest-documentation.md; done",
-    "docs:serve": "cd docs; { wait-on http://localhost:4000; open http://localhost:4000; } & jekyll serve"
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/popper.js/-/popper.js-1.12.9.tgz",
+  "_shasum": "0dfbc2dff96c451bb332edcfcfaaf566d331d5b3",
+  "_spec": "popper.js",
+  "_where": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Web",
+  "author": {
+    "name": "Federico Zivolo",
+    "email": "federico.zivolo@gmail.com"
   },
-  "lint-staged": {
-    "*.js": [
-      "prettier-eslint --write \"**/src/**/*.js\"",
-      "git add"
-    ]
+  "bugs": {
+    "url": "https://github.com/FezVrasta/popper.js/issues"
   },
-  "bundlesize": [
+  "bundleDependencies": false,
+  "contributors": [
     {
-      "path": "./packages/popper/dist/popper.min.js",
-      "threshold": "7.5 Kb"
-    },
-    {
-      "path": "./packages/tooltip/dist/tooltip.min.js",
-      "threshold": "2 Kb"
+      "name": "Contributors",
+      "url": "https://github.com/FezVrasta/popper.js/graphs/contributors"
     }
   ],
-  "dependencies": {},
-  "workspaces": [
-    "packages/*"
-  ]
+  "deprecated": false,
+  "description": "A kickass library to manage your poppers",
+  "devDependencies": {
+    "@popperjs/bundle": "^1.0.2",
+    "@popperjs/eslint-config-popper": "^1.0.0",
+    "@popperjs/test": "^1.0.0",
+    "@popperjs/test-utils": "^1.0.0",
+    "eslint": "^4.1.1",
+    "nuget-publish": "^1.0.3"
+  },
+  "homepage": "https://popper.js.org",
+  "keywords": [
+    "popperjs",
+    "component",
+    "drop",
+    "tooltip",
+    "popover",
+    "position",
+    "attached"
+  ],
+  "license": "MIT",
+  "main": "dist/umd/popper.js",
+  "module": "dist/esm/popper.js",
+  "name": "popper.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FezVrasta/popper.js.git"
+  },
+  "resolutions": {
+    "micromatch": "^3.0.3"
+  },
+  "scripts": {
+    "build": "node bundle.js",
+    "coverage": "COVERAGE=true yarn test",
+    "lint": "eslint .",
+    "postpublish": "nuget-publish && ./bower-publish.sh",
+    "prebuild": "yarn lint",
+    "prepare": "yarn build",
+    "pretest": "yarn lint",
+    "test": "popper-karma",
+    "test:dev": "BROWSERS=Chrome NODE_ENV=development yarn test"
+  },
+  "types": "index.d.ts",
+  "version": "1.12.9"
 }

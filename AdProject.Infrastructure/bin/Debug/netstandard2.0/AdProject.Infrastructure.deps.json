@@ -872,7 +872,7 @@
     "Microsoft.Extensions.Logging/2.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VP10syWV/vxYYMKgZ2eDESmUsz3gPxvBn5J6tkVN8lI4M+dF43RN8fWsEPbcAneDmZrHl3Pv23z05nmyGkJlpg==",
+      "sha512": "sha512-rE83LQh4KwSQEEjw62MQMejlK1TPqTOiQaHkCujA9SfE2FeJbPA5Z9J8aCZZgIGX04s3uzip23SlrW78GmRmXg==",
       "path": "microsoft.extensions.logging/2.0.0",
       "hashPath": "microsoft.extensions.logging.2.0.0.nupkg.sha512"
     },
@@ -928,7 +928,7 @@
     "Newtonsoft.Json/10.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
+      "sha512": "sha512-wBM7i7i3U2WX0ecor4zdVGvgrwFUjuigBoHKiL+nH39fCOpCPjBY3RDqJM32edvdyTAVdjzlccHsg41+/+zpSA==",
       "path": "newtonsoft.json/10.0.3",
       "hashPath": "newtonsoft.json.10.0.3.nupkg.sha512"
     },
@@ -1096,7 +1096,7 @@
     "System.Interactive.Async/3.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-DkUY7nMzVjLJxXjGm3rFY6svK2Y1aM0Kore+nMlA3USGeNQP+0J7tuHlVFvu//IVKO2vDGuBHH8ACH0aAxvsyw==",
+      "sha512": "sha512-JxJFnfSdEud7mZ1keTgM5qZN0qfjz1vltRcHmsN6ZxJDClT1eZoQkwSv/6YWYwxzqxt2uXMh5GJiEMGUoemtAQ==",
       "path": "system.interactive.async/3.1.1",
       "hashPath": "system.interactive.async.3.1.1.nupkg.sha512"
     },
@@ -1243,7 +1243,7 @@
     "System.Runtime.Serialization.Formatters/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-LBsmmqkQEYwUCFwKZ6QK8FvGEgigTIsCAKDxM+Fjtu1W2WlxKMaCBi6kMZPOwB3xL2hdl77u7Avq9wlCI+9qjQ==",
+      "sha512": "sha512-KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "hashPath": "system.runtime.serialization.formatters.4.3.0.nupkg.sha512"
     },
