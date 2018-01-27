@@ -7,12 +7,12 @@ using System.Text;
 
 namespace AdProject.Infrastructure.Data.Contexts.Configurations
 {
-    public class AnnouncementConfig : IEntityTypeConfiguration<Announcement>
+    public class AnnouncementConfig : IEntityTypeConfiguration<Advertisement>
     {
-        public void Configure(EntityTypeBuilder<Announcement> builder)
+        public void Configure(EntityTypeBuilder<Advertisement> builder)
         {
             builder
-                .ToTable("TBL_ANNOUNCEMENTS", AdProjectContext.SCHEME_NAME)
+                .ToTable("TBL_ADVERTS", AdProjectContext.SCHEME_NAME)
                 .HasKey(announcement => announcement.Id);
 
             builder

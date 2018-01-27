@@ -19,6 +19,12 @@ namespace AdProject.Web.Controllers
             return View();
         }
 
+        [Route(nameof(Dashboard))]
+        public IActionResult Dashboard()
+        {
+            return View();
+        }
+
         [Route(nameof(About))]
         public IActionResult About()
         {

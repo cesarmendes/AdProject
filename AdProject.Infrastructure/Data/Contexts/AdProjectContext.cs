@@ -30,7 +30,7 @@ namespace AdProject.Infrastructure.Data.Contexts
         {
         }
 
-        public DbSet<Announcement> Announcements { get; set; }
+        public DbSet<Advertisement> Adverts { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<Country> Countries { get; set; }

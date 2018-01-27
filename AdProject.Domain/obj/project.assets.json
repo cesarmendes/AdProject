@@ -177,7 +177,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cesar.silva.ext\\.nuget\\packages\\": {},
+    "C:\\Users\\cesar\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
@@ -187,18 +187,18 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Domain\\AdProject.Domain.csproj",
+      "projectUniqueName": "D:\\Projetos\\AdProject\\AdProject.Domain\\AdProject.Domain.csproj",
       "projectName": "AdProject.Domain",
-      "projectPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Domain\\AdProject.Domain.csproj",
-      "packagesPath": "C:\\Users\\cesar.silva.ext\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Domain\\obj\\",
+      "projectPath": "D:\\Projetos\\AdProject\\AdProject.Domain\\AdProject.Domain.csproj",
+      "packagesPath": "C:\\Users\\cesar\\.nuget\\packages\\",
+      "outputPath": "D:\\Projetos\\AdProject\\AdProject.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\cesar.silva.ext\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cesar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],

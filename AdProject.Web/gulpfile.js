@@ -25,6 +25,7 @@ var path = {
 var pathMove = [
     path.node + "/animate.css/**/*",
     path.node + "/bootstrap/**/*",
+    path.node + "/csshake/**/*",
     path.node + "/icheck/**/*",
     path.node + "/font-awesome/**/*",
     path.node + "/jquery/**/*",

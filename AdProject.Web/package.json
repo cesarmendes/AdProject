@@ -11,6 +11,7 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "bootstrap": "^4.0.0",
+    "csshake": "^1.5.3",
     "icheck": "^1.0.2",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",

@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\js\main.ts" />
+    <None Remove="App\main.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -41,7 +41,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="wwwroot\js\main.ts" />
+    <TypeScriptCompile Include="App\main.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -68,7 +68,7 @@
     <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
     <TypeScriptOutFile />
     <TypeScriptOutDir />
-    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptGeneratesDeclarations>True</TypeScriptGeneratesDeclarations>
     <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
     <TypeScriptSourceMap>True</TypeScriptSourceMap>
     <TypeScriptMapRoot />

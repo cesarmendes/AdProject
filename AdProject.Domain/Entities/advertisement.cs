@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AdProject.Domain.Entities
 {
-    public class Announcement : Entity<long>
+    public class Advertisement : Entity<long>
     {
         public string Title { get; set; }
         public decimal Price { get; set; }
