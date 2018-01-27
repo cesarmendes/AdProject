@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdProject.Domain", "AdProject.Domain\AdProject.Domain.csproj", "{D843AF02-4A9F-42DB-AC50-83C5F251445B}"
 EndProject
@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdProject.Application", "Ad
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdProject.Infrastructure", "AdProject.Infrastructure\AdProject.Infrastructure.csproj", "{94DF2BB6-2549-4322-A280-5F35AF816D1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdProject.Web", "AdProject.Web\AdProject.Web.csproj", "{52DB0DEC-D01C-41C3-B4B5-ACD5246EB807}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdProject.Web", "AdProject.Web\AdProject.Web.csproj", "{52DB0DEC-D01C-41C3-B4B5-ACD5246EB807}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
