@@ -8,17 +8,20 @@ using AdProject.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using AdProject.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Logging;
 
 namespace AdProject.Web.Controllers
 {
     [AllowAnonymous]
     public class AccountController : Controller
     {
+        private ILogger<AccountController> Logger { get; set; }
         private UserManager<AppUser> UserManager { get; set; }
-        public SignInManager<AppUser> SignInManager { get; set; }
+        private SignInManager<AppUser> SignInManager { get; set; }
 
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, ILogger<AccountController> logger)
         {
+            this.Logger = logger;
             this.UserManager = userManager;
             this.SignInManager = signInManager;
         }
@@ -37,6 +40,8 @@ namespace AdProject.Web.Controllers
         {
             try
             {
+                Logger.LogInformation("inícios do método ChangePassword com o parametro {model}", model);
+
                 if (ModelState.IsValid)
                 {
                     var id = UserManager.GetUserId(User);
@@ -53,11 +58,12 @@ namespace AdProject.Web.Controllers
                     }
 
                 }
+
+                Logger.LogInformation("fim do método ChangePassword com o parametro {model}", model);
             }
             catch (Exception ex)
             {
-
-                throw;
+                Logger.LogError(ex, "{model}" , model);
             }
 
             return View();
@@ -81,8 +87,7 @@ namespace AdProject.Web.Controllers
             }
             catch (Exception ex)
             {
-
-                throw;
+                Logger.LogError(ex, nameof(ForgotPassword), model);
             }
 
 
@@ -119,7 +124,6 @@ namespace AdProject.Web.Controllers
                     }
                     else if (result.IsNotAllowed)
                     {
-
                     }
                     else
                     {
