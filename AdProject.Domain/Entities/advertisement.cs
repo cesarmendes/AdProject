@@ -7,7 +7,9 @@ namespace AdProject.Domain.Entities
     public class Advertisement : Entity<long>
     {
         public string Title { get; set; }
+        public string Description { get; set; }
         public decimal Price { get; set; }
         public Nullable<decimal> PricePrevious { get; set; }
+        public DateTime Date { get; set; }
     }
 }

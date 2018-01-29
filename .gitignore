@@ -1,6 +1,6 @@
 .vs/
-**/bin/
-**/bin/
-**/obj/
-**/obj/
+**/bin/*
+**/bin/**/**
+**/obj/*
+**/obj/**/**
 **/node_modules/**
