@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 
-@using AdProject.Infrastructure.Identity
+@using AdProject.Infraestrutura.Identity
 @using Microsoft.AspNetCore.Identity
 
 @inject SignInManager<AppUser> SignInManager
@@ -74,7 +74,7 @@
                             <a class="nav-link text-white" asp-area="" asp-controller="Site" asp-action="Dashboard">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Adverts" asp-action="Index">Anúncios</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Anuncio" asp-action="Index">Anúncios</a>
                         </li>
                         <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Mensagens">
                             <a class="nav-link text-white" asp-area="" asp-controller="Site" asp-action="Index">
@@ -112,28 +112,28 @@
                                     <h3>Informação</h3>
                                 </li>
                                 <li class="dropdown-item">
-                                    <a asp-action="Index" asp-controller="Profile" class="btn-link-purple">Meu perfil</a>
+                                    <a asp-action="Index" asp-controller="Perfil" class="btn-link-purple">Meu perfil</a>
                                 </li>
                                 <li class="dropdown-item">
-                                    <a asp-action="ChangePassword" asp-controller="Account" class="btn-link-purple">Alterar senha</a>
+                                    <a asp-action="TrocarSenha" asp-controller="Conta" class="btn-link-purple">Alterar senha</a>
                                 </li>
                                 <li class="dropdown-divider"></li>
                                 <li class="dropdown-item">
-                                    <a asp-action="Logoff" asp-controller="Account" class="btn-link-purple">Sair&nbsp;<span class="fa fa-sign-out"></span></a>
+                                    <a asp-action="Sair" asp-controller="Conta" class="btn-link-purple">Sair&nbsp;<span class="fa fa-sign-out"></span></a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Account" asp-action="Logoff" data-toggle="tooltip" data-placement="bottom" title="Sair"><span class="fa fa-sign-out"></span></a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Conta" asp-action="Logoff" data-toggle="tooltip" data-placement="bottom" title="Sair"><span class="fa fa-sign-out"></span></a>
                         </li>
                     }
                     else
                     {
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Conta" asp-action="Entrar">Entrar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Account" asp-action="Register">Cadastro</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Conta" asp-action="Cadastro">Cadastro</a>
                         </li>
                     }
 

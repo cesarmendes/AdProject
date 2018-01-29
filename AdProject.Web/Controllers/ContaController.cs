@@ -13,13 +13,13 @@ using Microsoft.Extensions.Logging;
 namespace AdProject.Web.Controllers
 {
     [AllowAnonymous]
-    public class AccountController : Controller
+    public class ContaController : Controller
     {
-        private ILogger<AccountController> Logger { get; set; }
+        private ILogger<ContaController> Logger { get; set; }
         private UserManager<AppUser> UserManager { get; set; }
         private SignInManager<AppUser> SignInManager { get; set; }
 
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, ILogger<AccountController> logger)
+        public ContaController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, ILogger<ContaController> logger)
         {
             this.Logger = logger;
             this.UserManager = userManager;
@@ -28,7 +28,7 @@ namespace AdProject.Web.Controllers
 
         [Authorize]
         [HttpGet]
-        public IActionResult ChangePassword()
+        public IActionResult TrocarSenha()
         {
             return View();
         }
@@ -36,7 +36,7 @@ namespace AdProject.Web.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
+        public async Task<IActionResult> TrocarSenha(ChangePasswordViewModel model)
         {
             try
             {
@@ -95,14 +95,14 @@ namespace AdProject.Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult Login()
+        public IActionResult Entrar()
         {
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(LoginViewModel model)
+        public async Task<IActionResult> Entrar(LoginViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -116,7 +116,7 @@ namespace AdProject.Web.Controllers
                     }
                     else if (result.IsLockedOut)
                     {
-                        return RedirectToAction(nameof(Lockout));
+                        return RedirectToAction(nameof(Bloqueio));
                     }
                     else if (result.RequiresTwoFactor)
                     {
@@ -143,20 +143,20 @@ namespace AdProject.Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult Lockout()
+        public IActionResult Bloqueio()
         {
             return View();
         }
 
         [HttpGet]
-        public IActionResult Register()
+        public IActionResult Cadastro()
         {
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(RegisterViewModel model)
+        public async Task<IActionResult> Cadastro(RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {

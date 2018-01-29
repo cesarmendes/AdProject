@@ -5,9 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AdProject.Infraestrutura.Data.Contexts.Configurations
+namespace AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes
 {
-    public class AnnouncementConfig : IEntityTypeConfiguration<Anuncio>
+    public class AnuncioConfig : IEntityTypeConfiguration<Anuncio>
     {
         public void Configure(EntityTypeBuilder<Anuncio> builder)
         {

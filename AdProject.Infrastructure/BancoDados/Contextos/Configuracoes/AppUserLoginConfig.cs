@@ -6,7 +6,7 @@ using System.Text;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using AdProject.Infraestrutura.Identity;
 
-namespace AdProject.Infraestrutura.Data.Contexts.Configurations
+namespace AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes
 {
     public class AppUserLoginConfig : IEntityTypeConfiguration<AppUserLogin>
     {

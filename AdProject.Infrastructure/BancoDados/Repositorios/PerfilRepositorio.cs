@@ -5,11 +5,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AdProject.Infraestrutura.Data.Repositories
+namespace AdProject.Infraestrutura.BancoDados.Repositorios
 {
-    public class ProfileRepository : Repository<long, Perfil>, IPerfilRepositorio
+    public class PerfilRepositorio : Repositorio<long, Perfil>, IPerfilRepositorio
     {
-        public ProfileRepository(DbContext context)
+        public PerfilRepositorio(DbContext context)
             : base(context)
         {
         }

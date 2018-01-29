@@ -1,5 +1,5 @@
 ﻿using AdProject.Dominio.Entidades;
-using AdProject.Infraestrutura.Data.Contexts.Configurations;
+using AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes;
 using AdProject.Infraestrutura.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AdProject.Infraestrutura.Data.Contexts
+namespace AdProject.Infraestrutura.BancoDados.Contextos
 {
     public class AdProjectContext : IdentityDbContext<AppUser, AppRole, long, AppUserClaim, AppUserRole, AppUserLogin, AppRoleClaim, AppUserToken>
     {
@@ -42,9 +42,9 @@ namespace AdProject.Infraestrutura.Data.Contexts
         {
             base.OnModelCreating(builder);
 
-            builder.ApplyConfiguration<Categoria>(new CategoryConfig());
-            builder.ApplyConfiguration<Perfil>(new ProfileConfig());
-            builder.ApplyConfiguration<SubCategoria>(new SubCategoryConfig());
+            builder.ApplyConfiguration<Categoria>(new CategoriaConfig());
+            builder.ApplyConfiguration<Perfil>(new PerfilConfig());
+            builder.ApplyConfiguration<SubCategoria>(new SubCategoriaConfig());
 
 
             //Asp.Net Identity configuration

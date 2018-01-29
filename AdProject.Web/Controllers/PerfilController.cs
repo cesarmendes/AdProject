@@ -8,14 +8,14 @@ using Microsoft.AspNetCore.Mvc;
 namespace AdProject.Web.Controllers
 {
     [Authorize]
-    public class ProfileController : Controller
+    public class PerfilController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Edit()
+        public IActionResult Editar()
         {
             return View();
         }

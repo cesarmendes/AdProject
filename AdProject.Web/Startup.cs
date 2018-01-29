@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using AdProject.Dominio.Entidades;
 using AdProject.Infraestrutura.Identity;
-using AdProject.Infraestrutura.Data.Contexts;
+using AdProject.Infraestrutura.BancoDados.Contextos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
@@ -40,8 +40,8 @@ namespace AdProject.Web
             services
                 .ConfigureApplicationCookie(options =>
                 {
-                    options.LoginPath = "/Account/Login";
-                    options.LogoutPath = "/Account/Logout";
+                    options.LoginPath = "/Conta/Entrar";
+                    options.LogoutPath = "/Conta/Sair";
                     options.SlidingExpiration = true;
                     options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
                 });

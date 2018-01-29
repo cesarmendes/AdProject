@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace AdProject.Infraestrutura.Data.Contexts.Configurations
+namespace AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes
 {
-    public class SubCategoryConfig : IEntityTypeConfiguration<SubCategoria>
+    public class SubCategoriaConfig : IEntityTypeConfiguration<SubCategoria>
     {
         public void Configure(EntityTypeBuilder<SubCategoria> builder)
         {

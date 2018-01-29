@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AdProject.Web.Controllers
 {
     [Authorize]
-    public class AdvertsController : Controller
+    public class AnuncioController : Controller
     {
         public IActionResult Index()
         {

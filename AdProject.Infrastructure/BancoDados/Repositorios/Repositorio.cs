@@ -8,15 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdProject.Infraestrutura.Data.Repositories
+namespace AdProject.Infraestrutura.BancoDados.Repositorios
 {
-    public abstract class Repository<TKey, TEntity> : IRepositorio<TKey, TEntity>
+    public abstract class Repositorio<TKey, TEntity> : IRepositorio<TKey, TEntity>
         where TKey : struct
         where TEntity : Entidade<TKey>
     {
         public DbContext Context { get; private set; }
 
-        public Repository(DbContext context)
+        public Repositorio(DbContext context)
         {
             if (context == null)
                 throw new ArgumentNullException("Repository context reference cannot be null");

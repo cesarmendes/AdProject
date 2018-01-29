@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace AdProject.Infraestrutura.Data.Contexts.Configurations
+namespace AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes
 {
-    public class ProfileConfig : IEntityTypeConfiguration<Perfil>
+    public class PerfilConfig : IEntityTypeConfiguration<Perfil>
     {
         public void Configure(EntityTypeBuilder<Perfil> builder)
         {
