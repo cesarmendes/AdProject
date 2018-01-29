@@ -1123,14 +1123,14 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
-      "AdProject.Domain/1.0.0": {
+      "AdProject.Dominio/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/AdProject.Domain.dll": {}
+          "bin/placeholder/AdProject.Dominio.dll": {}
         },
         "runtime": {
-          "bin/placeholder/AdProject.Domain.dll": {}
+          "bin/placeholder/AdProject.Dominio.dll": {}
         }
       }
     }
@@ -4451,15 +4451,15 @@
         "system.xml.xmldocument.nuspec"
       ]
     },
-    "AdProject.Domain/1.0.0": {
+    "AdProject.Dominio/1.0.0": {
       "type": "project",
-      "path": "../AdProject.Domain/AdProject.Domain.csproj",
-      "msbuildProject": "../AdProject.Domain/AdProject.Domain.csproj"
+      "path": "../AdProject.Domain/AdProject.Dominio.csproj",
+      "msbuildProject": "../AdProject.Domain/AdProject.Dominio.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "AdProject.Domain >= 1.0.0",
+      "AdProject.Dominio >= 1.0.0",
       "AutoMapper >= 6.2.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 2.0.1",
@@ -4479,9 +4479,9 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Infrastructure\\AdProject.Infrastructure.csproj",
-      "projectName": "AdProject.Infrastructure",
-      "projectPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Infrastructure\\AdProject.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Infrastructure\\AdProject.Infraestrutura.csproj",
+      "projectName": "AdProject.Infraestrutura",
+      "projectPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Infrastructure\\AdProject.Infraestrutura.csproj",
       "packagesPath": "C:\\Users\\cesar.silva.ext\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
@@ -4504,8 +4504,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Domain\\AdProject.Domain.csproj": {
-              "projectPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Domain\\AdProject.Domain.csproj"
+            "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Domain\\AdProject.Dominio.csproj": {
+              "projectPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Domain\\AdProject.Dominio.csproj"
             }
           }
         }

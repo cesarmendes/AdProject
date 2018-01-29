@@ -187,9 +187,9 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Domain\\AdProject.Domain.csproj",
-      "projectName": "AdProject.Domain",
-      "projectPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Domain\\AdProject.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Domain\\AdProject.Dominio.csproj",
+      "projectName": "AdProject.Dominio",
+      "projectPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Domain\\AdProject.Dominio.csproj",
       "packagesPath": "C:\\Users\\cesar.silva.ext\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Domain\\obj\\",
       "projectStyle": "PackageReference",

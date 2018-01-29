@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AdProject.Domain.Repositories
+namespace AdProject.Dominio.Repositorios
 {
     public interface IUnityWorkRepository
     {

@@ -1,4 +1,4 @@
-﻿using AdProject.Infrastructure.Identity;
+﻿using AdProject.Infraestrutura.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AdProject.Infrastructure.Data.Contexts.Configurations
+namespace AdProject.Infraestrutura.Data.Contexts.Configurations
 {
     public class AppUserTokenConfig : IEntityTypeConfiguration<AppUserToken>
     {

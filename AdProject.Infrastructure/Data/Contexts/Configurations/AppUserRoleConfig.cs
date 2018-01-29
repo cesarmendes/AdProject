@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using AdProject.Infrastructure.Identity;
+using AdProject.Infraestrutura.Identity;
 
-namespace AdProject.Infrastructure.Data.Contexts.Configurations
+namespace AdProject.Infraestrutura.Data.Contexts.Configurations
 {
     public class AppUserRoleConfig : IEntityTypeConfiguration<AppUserRole>
     {

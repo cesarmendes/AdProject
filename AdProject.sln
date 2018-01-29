@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdProject.Domain", "AdProject.Domain\AdProject.Domain.csproj", "{D843AF02-4A9F-42DB-AC50-83C5F251445B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdProject.Dominio", "AdProject.Domain\AdProject.Dominio.csproj", "{D843AF02-4A9F-42DB-AC50-83C5F251445B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdProject.Application", "AdProject.Application\AdProject.Application.csproj", "{47F15940-1170-4194-B84A-F30FE8AEB220}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdProject.Aplicacao", "AdProject.Application\AdProject.Aplicacao.csproj", "{47F15940-1170-4194-B84A-F30FE8AEB220}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdProject.Infrastructure", "AdProject.Infrastructure\AdProject.Infrastructure.csproj", "{94DF2BB6-2549-4322-A280-5F35AF816D1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdProject.Infraestrutura", "AdProject.Infrastructure\AdProject.Infraestrutura.csproj", "{94DF2BB6-2549-4322-A280-5F35AF816D1C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdProject.Web", "AdProject.Web\AdProject.Web.csproj", "{52DB0DEC-D01C-41C3-B4B5-ACD5246EB807}"
 EndProject

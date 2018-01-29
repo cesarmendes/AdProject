@@ -1,15 +1,15 @@
-﻿using AdProject.Domain.Entities;
+﻿using AdProject.Dominio.Entidades;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace AdProject.Infrastructure.Data.Contexts.Configurations
+namespace AdProject.Infraestrutura.Data.Contexts.Configurations
 {
-    public class ProfileConfig : IEntityTypeConfiguration<Profile>
+    public class ProfileConfig : IEntityTypeConfiguration<Perfil>
     {
-        public void Configure(EntityTypeBuilder<Profile> builder)
+        public void Configure(EntityTypeBuilder<Perfil> builder)
         {
             builder
                 .ToTable("TBL_PROFILES", AdProjectContext.SCHEME_NAME)

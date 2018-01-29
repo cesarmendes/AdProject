@@ -1,13 +1,13 @@
-﻿using AdProject.Domain.Entities;
+﻿using AdProject.Dominio.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AdProject.Domain.ValueObjects
+namespace AdProject.Dominio.ValueObjects
 {
     public class Page<TKey, TEntity>
             where TKey : struct
-            where TEntity : Entity<TKey>
+            where TEntity : Entidade<TKey>
     {
         public Page(int actual, int size)
         {

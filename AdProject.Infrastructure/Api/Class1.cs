@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AdProject.Infrastructure.Api
+namespace AdProject.Infraestrutura.Api
 {
     class Class1
     {

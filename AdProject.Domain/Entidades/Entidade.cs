@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AdProject.Domain.Entities
+namespace AdProject.Dominio.Entidades
 {
-    public abstract class Entity<TKey>
+    public abstract class Entidade<TKey>
         where TKey : struct
     {
         #region Private variables
@@ -20,11 +20,11 @@ namespace AdProject.Domain.Entities
         #endregion
 
         #region Constructors
-        public Entity()
+        public Entidade()
         {
         }
 
-        public Entity(TKey id)
+        public Entidade(TKey id)
         {
             this._id = id;
         }

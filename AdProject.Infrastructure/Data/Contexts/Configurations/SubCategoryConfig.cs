@@ -1,15 +1,15 @@
-﻿using AdProject.Domain.Entities;
+﻿using AdProject.Dominio.Entidades;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace AdProject.Infrastructure.Data.Contexts.Configurations
+namespace AdProject.Infraestrutura.Data.Contexts.Configurations
 {
-    public class SubCategoryConfig : IEntityTypeConfiguration<SubCategory>
+    public class SubCategoryConfig : IEntityTypeConfiguration<SubCategoria>
     {
-        public void Configure(EntityTypeBuilder<SubCategory> builder)
+        public void Configure(EntityTypeBuilder<SubCategoria> builder)
         {
             builder
                 .ToTable("TBL_SUBCATEGORIES", AdProjectContext.SCHEME_NAME)
@@ -22,7 +22,7 @@ namespace AdProject.Infrastructure.Data.Contexts.Configurations
                 .ValueGeneratedOnAdd();
 
             builder
-                .Property(subCategory => subCategory.Name)
+                .Property(subCategory => subCategory.Nome)
                 .HasColumnName("NAME")
                 .HasColumnName("VARCHAR(300)")
                 //.HasColumnType(AdProjectContext.TYPE_STRING)
@@ -30,9 +30,9 @@ namespace AdProject.Infrastructure.Data.Contexts.Configurations
                 .IsRequired();
 
             builder
-                .HasOne(subCategory => subCategory.Category)
-                .WithMany(category => category.SubCategories)
-                .HasForeignKey(subCategory => subCategory.IdCategory)
+                .HasOne(subCategory => subCategory.Categoria)
+                .WithMany(category => category.SubCategorias)
+                .HasForeignKey(subCategory => subCategory.IdCategoria)
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }

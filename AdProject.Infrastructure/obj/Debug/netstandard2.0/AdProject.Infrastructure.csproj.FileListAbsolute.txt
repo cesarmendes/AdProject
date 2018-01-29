@@ -6,8 +6,6 @@ C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProje
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Infrastructure\obj\Debug\netstandard2.0\AdProject.Infrastructure.AssemblyInfo.cs
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Infrastructure\obj\Debug\netstandard2.0\AdProject.Infrastructure.dll
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Infrastructure\obj\Debug\netstandard2.0\AdProject.Infrastructure.pdb
-C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\AdProject.Domain.dll
-C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\AdProject.Domain.pdb
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Infrastructure\obj\Debug\netstandard2.0\AdProject.Infrastructure.csprojResolveAssemblyReference.cache
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\Microsoft.Extensions.Identity.Stores.dll
@@ -28,3 +26,5 @@ D:\Projetos\AdProject\AdProject.Infrastructure\obj\Debug\netstandard2.0\AdProjec
 D:\Projetos\AdProject\AdProject.Infrastructure\obj\Debug\netstandard2.0\AdProject.Infrastructure.AssemblyInfo.cs
 D:\Projetos\AdProject\AdProject.Infrastructure\obj\Debug\netstandard2.0\AdProject.Infrastructure.dll
 D:\Projetos\AdProject\AdProject.Infrastructure\obj\Debug\netstandard2.0\AdProject.Infrastructure.pdb
+C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\AdProject.Dominio.dll
+C:\Users\cesar.silva.ext\Documents\Visual Studio 2017\Projects\AdProject\AdProject.Infrastructure\bin\Debug\netstandard2.0\AdProject.Dominio.pdb

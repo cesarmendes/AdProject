@@ -1,11 +1,11 @@
-﻿using AdProject.Infrastructure.Identity;
+﻿using AdProject.Infraestrutura.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace AdProject.Infrastructure.Data.Contexts.Configurations
+namespace AdProject.Infraestrutura.Data.Contexts.Configurations
 {
     public class AppRoleConfig : IEntityTypeConfiguration<AppRole>
     {

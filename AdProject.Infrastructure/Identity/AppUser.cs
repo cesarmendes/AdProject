@@ -1,13 +1,13 @@
-﻿using AdProject.Domain.Entities;
+﻿using AdProject.Dominio.Entidades;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AdProject.Infrastructure.Identity
+namespace AdProject.Infraestrutura.Identity
 {
     public class AppUser : IdentityUser<long>
     {
-        public virtual Profile Profile { get; set; }
+        public virtual Perfil Profile { get; set; }
     }
 }

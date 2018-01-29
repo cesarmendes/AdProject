@@ -9,3 +9,37 @@ Successfully Registered! Save your sandbox environment credentials.
 
 MerchantId: 190bf54c-2f69-4c90-9616-061c3cda7d3c
 MerchantKey: WZIYMOMXEAWGPIIUTNYCJMTSKXKDKKJKOPFOLAMP
+
+
+
+
+Anúncios campos comuns
+
+Título
+Descrição
+Data
+Valor
+Proprietario(PF ou PJ)
+fotos
+bairro
+cidade
+estado
+pais
+
+veículos
+situacao(novo ou usado)
+ano modelo
+ano fabricacao
+cor
+modelo
+marca
+kilometragem
+portas
+
+
+imóveis
+metragem
+vagas
+banheiros
+quartos
+

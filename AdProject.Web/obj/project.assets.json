@@ -5073,31 +5073,31 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
-      "AdProject.Application/1.0.0": {
+      "AdProject.Aplicacao/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/AdProject.Application.dll": {}
+          "bin/placeholder/AdProject.Aplicacao.dll": {}
         },
         "runtime": {
-          "bin/placeholder/AdProject.Application.dll": {}
+          "bin/placeholder/AdProject.Aplicacao.dll": {}
         }
       },
-      "AdProject.Domain/1.0.0": {
+      "AdProject.Dominio/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/AdProject.Domain.dll": {}
+          "bin/placeholder/AdProject.Dominio.dll": {}
         },
         "runtime": {
-          "bin/placeholder/AdProject.Domain.dll": {}
+          "bin/placeholder/AdProject.Dominio.dll": {}
         }
       },
-      "AdProject.Infrastructure/1.0.0": {
+      "AdProject.Infraestrutura/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "AdProject.Domain": "1.0.0",
+          "AdProject.Dominio": "1.0.0",
           "AutoMapper": "6.2.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.1",
           "Microsoft.EntityFrameworkCore.Tools": "2.0.1",
@@ -5105,10 +5105,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": "2.0.1"
         },
         "compile": {
-          "bin/placeholder/AdProject.Infrastructure.dll": {}
+          "bin/placeholder/AdProject.Infraestrutura.dll": {}
         },
         "runtime": {
-          "bin/placeholder/AdProject.Infrastructure.dll": {}
+          "bin/placeholder/AdProject.Infraestrutura.dll": {}
         }
       }
     }
@@ -13253,27 +13253,27 @@
         "windowsazure.storage.nuspec"
       ]
     },
-    "AdProject.Application/1.0.0": {
+    "AdProject.Aplicacao/1.0.0": {
       "type": "project",
-      "path": "../AdProject.Application/AdProject.Application.csproj",
-      "msbuildProject": "../AdProject.Application/AdProject.Application.csproj"
+      "path": "../AdProject.Application/AdProject.Aplicacao.csproj",
+      "msbuildProject": "../AdProject.Application/AdProject.Aplicacao.csproj"
     },
-    "AdProject.Domain/1.0.0": {
+    "AdProject.Dominio/1.0.0": {
       "type": "project",
-      "path": "../AdProject.Domain/AdProject.Domain.csproj",
-      "msbuildProject": "../AdProject.Domain/AdProject.Domain.csproj"
+      "path": "../AdProject.Domain/AdProject.Dominio.csproj",
+      "msbuildProject": "../AdProject.Domain/AdProject.Dominio.csproj"
     },
-    "AdProject.Infrastructure/1.0.0": {
+    "AdProject.Infraestrutura/1.0.0": {
       "type": "project",
-      "path": "../AdProject.Infrastructure/AdProject.Infrastructure.csproj",
-      "msbuildProject": "../AdProject.Infrastructure/AdProject.Infrastructure.csproj"
+      "path": "../AdProject.Infrastructure/AdProject.Infraestrutura.csproj",
+      "msbuildProject": "../AdProject.Infrastructure/AdProject.Infraestrutura.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "AdProject.Application >= 1.0.0",
-      "AdProject.Domain >= 1.0.0",
-      "AdProject.Infrastructure >= 1.0.0",
+      "AdProject.Aplicacao >= 1.0.0",
+      "AdProject.Dominio >= 1.0.0",
+      "AdProject.Infraestrutura >= 1.0.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 3.2.0",
       "Microsoft.AspNetCore.All >= 2.0.5",
       "Microsoft.NETCore.App >= 2.0.0",
@@ -13317,14 +13317,14 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Infrastructure\\AdProject.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Infrastructure\\AdProject.Infrastructure.csproj"
+            "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Application\\AdProject.Aplicacao.csproj": {
+              "projectPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Application\\AdProject.Aplicacao.csproj"
             },
-            "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Domain\\AdProject.Domain.csproj": {
-              "projectPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Domain\\AdProject.Domain.csproj"
+            "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Infrastructure\\AdProject.Infraestrutura.csproj": {
+              "projectPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Infrastructure\\AdProject.Infraestrutura.csproj"
             },
-            "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Application\\AdProject.Application.csproj": {
-              "projectPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Application\\AdProject.Application.csproj"
+            "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Domain\\AdProject.Dominio.csproj": {
+              "projectPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Domain\\AdProject.Dominio.csproj"
             }
           }
         }

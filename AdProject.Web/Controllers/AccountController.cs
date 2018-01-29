@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AdProject.Web.Models;
-using AdProject.Infrastructure.Identity;
+using AdProject.Infraestrutura.Identity;
 using Microsoft.AspNetCore.Identity;
-using AdProject.Domain.Entities;
+using AdProject.Dominio.Entidades;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Logging;
 
@@ -168,11 +168,11 @@ namespace AdProject.Web.Controllers
                 }
                 else
                 {
-                    var userIdentity = new Infrastructure.Identity.AppUser();
+                    var userIdentity = new Infraestrutura.Identity.AppUser();
                     userIdentity.UserName = model.Email;
                     userIdentity.Email = model.Email;
-                    userIdentity.Profile = new Profile();
-                    userIdentity.Profile.Name = model.Name;
+                    userIdentity.Profile = new Perfil();
+                    userIdentity.Profile.Nome = model.Name;
 
                     var result = await this.UserManager.CreateAsync(userIdentity, model.Password);
 

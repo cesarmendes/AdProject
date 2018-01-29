@@ -1,15 +1,15 @@
-﻿using AdProject.Domain.Entities;
+﻿using AdProject.Dominio.Entidades;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AdProject.Infrastructure.Data.Contexts.Configurations
+namespace AdProject.Infraestrutura.Data.Contexts.Configurations
 {
-    public class AnnouncementConfig : IEntityTypeConfiguration<Advertisement>
+    public class AnnouncementConfig : IEntityTypeConfiguration<Anuncio>
     {
-        public void Configure(EntityTypeBuilder<Advertisement> builder)
+        public void Configure(EntityTypeBuilder<Anuncio> builder)
         {
             builder
                 .ToTable("TBL_ADVERTS", AdProjectContext.SCHEME_NAME)
@@ -22,7 +22,7 @@ namespace AdProject.Infrastructure.Data.Contexts.Configurations
                 .ValueGeneratedOnAdd();
 
             builder
-                .Property(announcement => announcement.Price)
+                .Property(announcement => announcement.Preco)
                 .HasColumnName("PRICE")
                 .HasColumnType(AdProjectContext.TYPE_DECIMAL)
                 .IsRequired();

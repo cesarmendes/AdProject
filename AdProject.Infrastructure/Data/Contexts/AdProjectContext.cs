@@ -1,13 +1,13 @@
-﻿using AdProject.Domain.Entities;
-using AdProject.Infrastructure.Data.Contexts.Configurations;
-using AdProject.Infrastructure.Identity;
+﻿using AdProject.Dominio.Entidades;
+using AdProject.Infraestrutura.Data.Contexts.Configurations;
+using AdProject.Infraestrutura.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AdProject.Infrastructure.Data.Contexts
+namespace AdProject.Infraestrutura.Data.Contexts
 {
     public class AdProjectContext : IdentityDbContext<AppUser, AppRole, long, AppUserClaim, AppUserRole, AppUserLogin, AppRoleClaim, AppUserToken>
     {
@@ -30,21 +30,21 @@ namespace AdProject.Infrastructure.Data.Contexts
         {
         }
 
-        public DbSet<Advertisement> Adverts { get; set; }
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<City> Cities { get; set; }
-        public DbSet<Country> Countries { get; set; }
-        public DbSet<Profile> Profiles { get; set; }
-        public DbSet<State> States { get; set; }
-        public DbSet<SubCategory> SubCategories { get; set; }
+        public DbSet<Anuncio> Adverts { get; set; }
+        public DbSet<Categoria> Categories { get; set; }
+        public DbSet<Cidade> Cities { get; set; }
+        public DbSet<Pais> Countries { get; set; }
+        public DbSet<Perfil> Profiles { get; set; }
+        public DbSet<Estado> States { get; set; }
+        public DbSet<SubCategoria> SubCategories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 
-            builder.ApplyConfiguration<Category>(new CategoryConfig());
-            builder.ApplyConfiguration<Profile>(new ProfileConfig());
-            builder.ApplyConfiguration<SubCategory>(new SubCategoryConfig());
+            builder.ApplyConfiguration<Categoria>(new CategoryConfig());
+            builder.ApplyConfiguration<Perfil>(new ProfileConfig());
+            builder.ApplyConfiguration<SubCategoria>(new SubCategoryConfig());
 
 
             //Asp.Net Identity configuration

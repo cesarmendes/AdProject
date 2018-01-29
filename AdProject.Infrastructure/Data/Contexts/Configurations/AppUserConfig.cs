@@ -3,10 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using AdProject.Domain.Entities;
-using AdProject.Infrastructure.Identity;
+using AdProject.Dominio.Entidades;
+using AdProject.Infraestrutura.Identity;
 
-namespace AdProject.Infrastructure.Data.Contexts.Configurations
+namespace AdProject.Infraestrutura.Data.Contexts.Configurations
 {
     public class AppUserConfig : IEntityTypeConfiguration<AppUser>
     {
@@ -17,7 +17,7 @@ namespace AdProject.Infrastructure.Data.Contexts.Configurations
             builder
                 .HasOne(user => user.Profile)
                 .WithOne()
-                .HasForeignKey<Profile>(profile => profile.Id);
+                .HasForeignKey<Perfil>(profile => profile.Id);
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿using AdProject.Domain.Entities;
-using AdProject.Domain.Repositories;
-using AdProject.Domain.ValueObjects;
+﻿using AdProject.Dominio.Entidades;
+using AdProject.Dominio.Repositorios;
+using AdProject.Dominio.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,11 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdProject.Infrastructure.Data.Repositories
+namespace AdProject.Infraestrutura.Data.Repositories
 {
-    public abstract class Repository<TKey, TEntity> : IRepository<TKey, TEntity>
+    public abstract class Repository<TKey, TEntity> : IRepositorio<TKey, TEntity>
         where TKey : struct
-        where TEntity : Entity<TKey>
+        where TEntity : Entidade<TKey>
     {
         public DbContext Context { get; private set; }
 
@@ -24,32 +24,32 @@ namespace AdProject.Infrastructure.Data.Repositories
             this.Context = context;
         }
 
-        public TEntity Get(TKey id)
+        public TEntity Obter(TKey id)
         {
             return this.Context.Find<TEntity>(id);
         }
 
-        public Task<TEntity> GetAsync(TKey id)
+        public Task<TEntity> ObterAsync(TKey id)
         {
             return this.Context.FindAsync<TEntity>(id);
         }
 
-        public void Insert(TEntity entity)
+        public void Inserir(TEntity entity)
         {
             this.Context.Add<TEntity>(entity);
         }
 
-        public void Update(TEntity entity)
+        public void Atualizar(TEntity entity)
         {
             this.Context.Update<TEntity>(entity);
         }
 
-        public void Delete(TEntity entity)
+        public void Remover(TEntity entity)
         {
             this.Context.Remove<TEntity>(entity);
         }
 
-        public void Delete(TKey id)
+        public void Remover(TKey id)
         {
             var entity = default(TEntity);
             entity.Id = id;
@@ -57,17 +57,17 @@ namespace AdProject.Infrastructure.Data.Repositories
             this.Context.Remove<TEntity>(entity);
         }
 
-        public int Commit()
+        public int Salvar()
         {
             return this.Context.SaveChanges();
         }
 
-        public Task<int> CommitAsync()
+        public Task<int> SalvarAsync()
         {
             return this.Context.SaveChangesAsync();
         }
 
-        public Page<TKey, TEntity> Search()
+        public Page<TKey, TEntity> Filtrar()
         {
             throw new NotImplementedException();
         }
