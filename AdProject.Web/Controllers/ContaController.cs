@@ -36,7 +36,7 @@ namespace AdProject.Web.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> TrocarSenha(ChangePasswordViewModel model)
+        public async Task<IActionResult> TrocarSenha(TrocarSenhaViewModel model)
         {
             try
             {
@@ -49,7 +49,7 @@ namespace AdProject.Web.Controllers
 
                     if (user != null)
                     {
-                        var result = await UserManager.ChangePasswordAsync(user,model.PasswordCurrent, model.Password);
+                        var result = await UserManager.ChangePasswordAsync(user,model.SenhaAtual, model.Senha);
 
                         if (result.Succeeded)
                         {
@@ -102,13 +102,15 @@ namespace AdProject.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Entrar(LoginViewModel model)
+        public async Task<IActionResult> Entrar(EntrarViewModel model)
         {
+            Logger.LogInformation("Login inicio e-mail: {Email}", model.Email);
+
             if (ModelState.IsValid)
             {
                 if (!SignInManager.IsSignedIn(User))
                 {
-                    var result = await this.SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, true);
+                    var result = await this.SignInManager.PasswordSignInAsync(model.Email, model.Senha, model.ManterConectado, true);
 
                     if (result.Succeeded)
                     {
@@ -136,7 +138,7 @@ namespace AdProject.Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Logoff()
+        public async Task<IActionResult> Sair()
         {
             await this.SignInManager.SignOutAsync();
             return RedirectToAction("Index", "Site");
@@ -156,7 +158,7 @@ namespace AdProject.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Cadastro(RegisterViewModel model)
+        public async Task<IActionResult> Cadastro(CadastroViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -172,9 +174,9 @@ namespace AdProject.Web.Controllers
                     userIdentity.UserName = model.Email;
                     userIdentity.Email = model.Email;
                     userIdentity.Profile = new Perfil();
-                    userIdentity.Profile.Nome = model.Name;
+                    userIdentity.Profile.Nome = model.Nome;
 
-                    var result = await this.UserManager.CreateAsync(userIdentity, model.Password);
+                    var result = await this.UserManager.CreateAsync(userIdentity, model.Senha);
 
                     if (result.Succeeded)
                     {

@@ -1,6 +1,6 @@
 ﻿@using AdProject.Web.Resources
 
-@model AdProject.Web.Models.LoginViewModel
+@model AdProject.Web.Models.EntrarViewModel
 
 @{
     ViewData["Title"] = "Login";
@@ -19,13 +19,13 @@
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <input asp-for="Password" type="password" class="form-control" placeholder="@TextResource.Password" />
-                    <span asp-validation-for="Password" class="text-danger"></span>
+                    <input asp-for="Senha" type="password" class="form-control" placeholder="@TextResource.Password" />
+                    <span asp-validation-for="Senha" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <input type="checkbox" asp-for="RememberMe" />
-                    <label asp-for="RememberMe" class="text-purple"></label>
-                    <span asp-validation-for="RememberMe" class="text-danger"></span>
+                    <input type="checkbox" asp-for="ManterConectado" />
+                    <label asp-for="ManterConectado" class="text-purple"></label>
+                    <span asp-validation-for="ManterConectado" class="text-danger"></span>
                     <a asp-action="ForgotPassword" asp-controller="Account" class="float-right">Esqueci a senha</a>
                 </div>
                 <div class="form-group">

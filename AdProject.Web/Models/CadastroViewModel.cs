@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace AdProject.Web.Models
 {
-    public class RegisterViewModel
+    public class CadastroViewModel
     {
         [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(TextResource))]
         [Display(Name = "Name", ResourceType = typeof(TextResource))]
-        public string Name { get; set; }
+        public string Nome { get; set; }
 
         [EmailAddress]
         [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(TextResource))]
@@ -20,12 +20,12 @@ namespace AdProject.Web.Models
 
         [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(TextResource))]
         [Display(Name = "Password", ResourceType = typeof(TextResource))]
-        public string Password { get; set; }
+        public string Senha { get; set; }
 
         [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(TextResource))]
         [Display(Name = "PasswordConfirm", ResourceType = typeof(TextResource))]
-        public string PasswordConfirm { get; set; }
+        public string ConfirmarSenha { get; set; }
 
-        public bool TermAccepted { get; set; }
+        public bool AceitoTermos { get; set; }
     }
 }

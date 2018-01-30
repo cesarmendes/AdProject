@@ -7,18 +7,19 @@ using System.Threading.Tasks;
 
 namespace AdProject.Web.Models
 {
-    public class LoginViewModel
+    public class TrocarSenhaViewModel
     {
-        [EmailAddress]
         [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(TextResource))]
-        [Display(Name = "Email", ResourceType = typeof(TextResource))]
-        public string Email { get; set; }
+        [Display(Name = "PasswordCurrent", ResourceType = typeof(TextResource))]
+        public string SenhaAtual { get; set; }
 
         [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(TextResource))]
         [Display(Name = "Password", ResourceType = typeof(TextResource))]
-        public string Password { get; set; }
+        public string Senha { get; set; }
 
-        [Display(Name = "RememberMe", ResourceType = typeof(TextResource))]
-        public bool RememberMe { get; set; }
+        [Compare("Senha")]
+        [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(TextResource))]
+        [Display(Name = "PasswordConfirm", ResourceType = typeof(TextResource))]
+        public string ConfirmarSenha { get; set; }
     }
 }
