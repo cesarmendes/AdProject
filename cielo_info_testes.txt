@@ -19,12 +19,13 @@ Título
 Descrição
 Data
 Valor
-Proprietario(PF ou PJ)
 fotos
 bairro
 cidade
 estado
 pais
+categoria
+subcategoria
 
 veículos
 situacao(novo ou usado)
