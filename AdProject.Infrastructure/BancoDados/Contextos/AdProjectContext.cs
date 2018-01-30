@@ -28,6 +28,7 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos
         public AdProjectContext(DbContextOptions<AdProjectContext> options)
             : base(options)
         {
+
         }
 
         public DbSet<Anuncio> Adverts { get; set; }
