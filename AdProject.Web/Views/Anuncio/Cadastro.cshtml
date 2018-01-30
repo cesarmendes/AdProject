@@ -2,7 +2,7 @@
     <div class="col-12 col-lg-10 col-xl-8 mt-4">
         <div class="card border-green-dark shadown-green-dark">
             <div class="card-body p-2">
-                <ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
+                <ul class="nav nav-justified" id="myTab" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">1</a>
                     </li>
@@ -24,7 +24,7 @@
                 </div>
                 <hr class="bg-green-dark" />
                 <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div class="tab-pane fade show active" id="t1" role="tabpanel" aria-labelledby="pills-home-tab">
                         <form>
                             <div class="row">
                                 <div class="col-12 col-xl-6">
@@ -70,8 +70,10 @@
                             </div>
                         </form>
                     </div>
-                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
-                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+                    <div class="tab-pane fade" id="t2" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+                    <div class="tab-pane fade" id="t3" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+                    <div class="tab-pane fade" id="t4" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+                    <div class="tab-pane fade" id="t5" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
                 </div>
             </div>
             <div class="card-footer">
@@ -86,7 +88,14 @@
     var v = new Vue({
         el: '#ac',
         data: {
-            titulo:null
+            titulo: null,
+            tabs: {
+                geral: true,
+                fase2: false,
+                fase3: false,
+                fase4: false,
+                fase5: false
+            }
         },
         methods: {
             avancar: function () {
@@ -101,7 +110,6 @@
         },
         mounted: function () {
             alert('montado');
-
          }
     });
 </script>
