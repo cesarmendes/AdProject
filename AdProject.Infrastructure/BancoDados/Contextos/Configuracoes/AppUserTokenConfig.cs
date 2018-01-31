@@ -12,7 +12,7 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes
     {
         public void Configure(EntityTypeBuilder<AppUserToken> builder)
         {
-            builder.ToTable("TBL_USER_TOKENS", AdProjectContext.SCHEME_NAME);
+            builder.ToTable("TBL_USUARIO_TOKENS", AdProjectContext.SCHEME_NAME);
         }
     }
 }

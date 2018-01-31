@@ -11,7 +11,7 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes
     {
         public void Configure(EntityTypeBuilder<AppRole> builder)
         {
-            builder.ToTable("TBL_ROLES", AdProjectContext.SCHEME_NAME);
+            builder.ToTable("TBL_PAPEIS", AdProjectContext.SCHEME_NAME);
         }
     }
 }

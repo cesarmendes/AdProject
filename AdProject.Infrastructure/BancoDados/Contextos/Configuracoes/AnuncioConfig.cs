@@ -12,18 +12,42 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes
         public void Configure(EntityTypeBuilder<Anuncio> builder)
         {
             builder
-                .ToTable("TBL_ADVERTS", AdProjectContext.SCHEME_NAME)
-                .HasKey(announcement => announcement.Id);
+                .ToTable("TBL_ANUNCIOS", AdProjectContext.SCHEME_NAME)
+                .HasKey(anuncio => anuncio.Id);
 
             builder
-                .Property(announcement => announcement.Id)
+                .Property(anuncio => anuncio.Id)
                 .HasColumnName("ID")
                 .HasColumnType(AdProjectContext.TYPE_BIGINT)
                 .ValueGeneratedOnAdd();
 
             builder
-                .Property(announcement => announcement.Preco)
-                .HasColumnName("PRICE")
+                .Property(anuncio => anuncio.Data)
+                .HasColumnName("DATA")
+                .HasColumnType(AdProjectContext.TYPE_DATETIME)
+                .IsRequired();
+
+            builder
+                .Property(anuncio => anuncio.Descricao)
+                .HasColumnName("DESCRICAO")
+                .HasColumnType(AdProjectContext.TYPE_STRING)
+                .HasMaxLength(1000)
+                .IsRequired();
+
+            builder.Property(anuncio => anuncio.Titulo)
+                .HasColumnName("TITULO")
+                .HasColumnType(AdProjectContext.TYPE_STRING)
+                .HasMaxLength(200)
+                .IsRequired();
+
+            builder
+                .Property(anuncio => anuncio.ValorAnterior)
+                .HasColumnName("VALOR_ANTERIOR")
+                .HasColumnType(AdProjectContext.TYPE_DECIMAL);
+                
+            builder
+                .Property(anuncio => anuncio.Valor)
+                .HasColumnName("VALOR")
                 .HasColumnType(AdProjectContext.TYPE_DECIMAL)
                 .IsRequired();
         }

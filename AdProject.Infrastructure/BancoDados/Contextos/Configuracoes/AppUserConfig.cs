@@ -12,12 +12,12 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes
     {
         public void Configure(EntityTypeBuilder<AppUser> builder)
         {
-            builder.ToTable("TBL_USERS", AdProjectContext.SCHEME_NAME);
+            builder.ToTable("TBL_USUARIOS", AdProjectContext.SCHEME_NAME);
 
             builder
                 .HasOne(user => user.Profile)
                 .WithOne()
-                .HasForeignKey<Perfil>(profile => profile.Id);
+                .HasForeignKey<Perfil>(perfil => perfil.Id);
         }
     }
 }

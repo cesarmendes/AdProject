@@ -12,7 +12,7 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes
     {
         public void Configure(EntityTypeBuilder<AppUserClaim> builder)
         {
-            builder.ToTable("TBL_USER_CLAIMS", AdProjectContext.SCHEME_NAME);
+            builder.ToTable("TBL_USUARIO_DIREITOS", AdProjectContext.SCHEME_NAME);
         }
     }
 }
