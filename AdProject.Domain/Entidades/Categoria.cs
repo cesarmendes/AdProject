@@ -7,6 +7,6 @@ namespace AdProject.Dominio.Entidades
     public class Categoria : Entidade<long>
     {
         public string Nome { get; set; }
-        public virtual ICollection<SubCategoria> SubCategorias { get; set; }
+        public virtual ICollection<Subcategoria> SubCategorias { get; set; }
     }
 }

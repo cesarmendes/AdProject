@@ -8,6 +8,8 @@ namespace AdProject.Dominio.Entidades
     {
         public string Nome { get; set; }
 
+        public string Codigo { get; set; }
+
         public virtual ICollection<Estado> Estados { get; set; }
     }
 }

@@ -12,11 +12,11 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes
         public void Configure(EntityTypeBuilder<Perfil> builder)
         {
             builder
-                .ToTable("TBL_PROFILES", AdProjectContext.SCHEME_NAME)
-                .HasKey(profile => profile.Id);
+                .ToTable("TBL_PEFIS", AdProjectContext.SCHEME_NAME)
+                .HasKey(perfil => perfil.Id);
 
             builder
-                .Property(profile => profile.Id)
+                .Property(perfil => perfil.Id)
                 .HasColumnName("ID")
                 .HasColumnType(AdProjectContext.TYPE_BIGINT)
                 .ValueGeneratedNever();

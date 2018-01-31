@@ -8,8 +8,8 @@ namespace AdProject.Dominio.Entidades
     {
         public string Titulo { get; set; }
         public string Descricao { get; set; }
-        public decimal Preco { get; set; }
-        public Nullable<decimal> PrecoAnterior { get; set; }
+        public decimal Valor { get; set; }
+        public Nullable<decimal> ValorAnterior { get; set; }
         public DateTime Data { get; set; }
     }
 }

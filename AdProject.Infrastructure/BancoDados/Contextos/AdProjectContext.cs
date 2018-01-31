@@ -18,7 +18,7 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos
         public static readonly string TYPE_BOOL = "BIT";
         public static readonly string TYPE_STRING = "VARCHAR";
         public static readonly string TYPE_TEXT = "TEXT";
-
+        public static readonly string TYPE_DATETIME = "DATETIME";
 
         public AdProjectContext()
             : base()
@@ -31,13 +31,13 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos
 
         }
 
-        public DbSet<Anuncio> Adverts { get; set; }
-        public DbSet<Categoria> Categories { get; set; }
-        public DbSet<Cidade> Cities { get; set; }
-        public DbSet<Pais> Countries { get; set; }
-        public DbSet<Perfil> Profiles { get; set; }
-        public DbSet<Estado> States { get; set; }
-        public DbSet<SubCategoria> SubCategories { get; set; }
+        public DbSet<Anuncio> Anuncios { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Cidade> Cidades { get; set; }
+        public DbSet<Pais> Paises { get; set; }
+        public DbSet<Perfil> Perfis { get; set; }
+        public DbSet<Estado> Estados { get; set; }
+        public DbSet<Subcategoria> Subcategorias { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -45,7 +45,7 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos
 
             builder.ApplyConfiguration<Categoria>(new CategoriaConfig());
             builder.ApplyConfiguration<Perfil>(new PerfilConfig());
-            builder.ApplyConfiguration<SubCategoria>(new SubCategoriaConfig());
+            builder.ApplyConfiguration<Subcategoria>(new SubcategoriaConfig());
 
 
             //Asp.Net Identity configuration

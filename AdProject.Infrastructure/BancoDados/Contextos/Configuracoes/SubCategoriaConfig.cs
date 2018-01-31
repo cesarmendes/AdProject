@@ -7,22 +7,22 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes
 {
-    public class SubCategoriaConfig : IEntityTypeConfiguration<SubCategoria>
+    public class SubcategoriaConfig : IEntityTypeConfiguration<Subcategoria>
     {
-        public void Configure(EntityTypeBuilder<SubCategoria> builder)
+        public void Configure(EntityTypeBuilder<Subcategoria> builder)
         {
             builder
-                .ToTable("TBL_SUBCATEGORIES", AdProjectContext.SCHEME_NAME)
-                .HasKey(subCategory => subCategory.Id);
+                .ToTable("TBL_SUBCATEGORIAS", AdProjectContext.SCHEME_NAME)
+                .HasKey(subcategoria => subcategoria.Id);
 
             builder
-                .Property(subCategory => subCategory.Id)
+                .Property(subcategoria => subcategoria.Id)
                 .HasColumnName("ID")
                 .HasColumnType(AdProjectContext.TYPE_BIGINT)
                 .ValueGeneratedOnAdd();
 
             builder
-                .Property(subCategory => subCategory.Nome)
+                .Property(subcategoria => subcategoria.Nome)
                 .HasColumnName("NAME")
                 .HasColumnName("VARCHAR(300)")
                 //.HasColumnType(AdProjectContext.TYPE_STRING)
@@ -30,9 +30,9 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes
                 .IsRequired();
 
             builder
-                .HasOne(subCategory => subCategory.Categoria)
-                .WithMany(category => category.SubCategorias)
-                .HasForeignKey(subCategory => subCategory.IdCategoria)
+                .HasOne(subcategoria => subcategoria.Categoria)
+                .WithMany(categoria => categoria.SubCategorias)
+                .HasForeignKey(subcategoria => subcategoria.IdCategoria)
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }

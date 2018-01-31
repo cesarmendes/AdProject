@@ -12,18 +12,18 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes
         public void Configure(EntityTypeBuilder<Categoria> builder)
         {
             builder
-               .ToTable("TBL_CATEGORIES", AdProjectContext.SCHEME_NAME)
-               .HasKey(category => category.Id);
+               .ToTable("TBL_CATEGORIAS", AdProjectContext.SCHEME_NAME)
+               .HasKey(categoria => categoria.Id);
 
             builder
-                .Property(category => category.Id)
+                .Property(categoria => categoria.Id)
                 .HasColumnName("ID")
                 .HasColumnType(AdProjectContext.TYPE_BIGINT)
                 .ValueGeneratedOnAdd();
 
             builder
-                .Property(category => category.Nome)
-                .HasColumnName("NAME")
+                .Property(categoria => categoria.Nome)
+                .HasColumnName("NOME")
                 .HasColumnType("VARCHAR(300)")
                 //.HasColumnType(AdProjectContext.TYPE_STRING)
                 //.HasMaxLength(300)
