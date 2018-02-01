@@ -30,8 +30,9 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes
             builder
                 .Property(cidade => cidade.Nome)
                 .HasColumnName("NOME")
-                .HasColumnType(AdProjectContext.TYPE_STRING)
-                .HasMaxLength(300)
+                .HasColumnType("VARCHAR(300)")
+                //.HasColumnType(AdProjectContext.TYPE_STRING)
+                //.HasMaxLength(300)
                 .IsRequired();
                 
         }
