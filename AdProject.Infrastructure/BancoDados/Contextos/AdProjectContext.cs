@@ -43,8 +43,12 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos
         {
             base.OnModelCreating(builder);
 
+            builder.ApplyConfiguration<Anuncio>(new AnuncioConfig());
             builder.ApplyConfiguration<Categoria>(new CategoriaConfig());
+            builder.ApplyConfiguration<Cidade>(new CidadeConfig());
+            builder.ApplyConfiguration<Pais>(new PaisConfig());
             builder.ApplyConfiguration<Perfil>(new PerfilConfig());
+            builder.ApplyConfiguration<Estado>(new EstadoConfig());
             builder.ApplyConfiguration<Subcategoria>(new SubcategoriaConfig());
 
 

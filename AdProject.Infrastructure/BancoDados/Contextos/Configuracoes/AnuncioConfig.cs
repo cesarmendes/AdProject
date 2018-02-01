@@ -30,14 +30,16 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes
             builder
                 .Property(anuncio => anuncio.Descricao)
                 .HasColumnName("DESCRICAO")
-                .HasColumnType(AdProjectContext.TYPE_STRING)
-                .HasMaxLength(1000)
+                  .HasColumnType("VARCHAR(1000)")
+                //.HasColumnType(AdProjectContext.TYPE_STRING)
+                //.HasMaxLength(1000)
                 .IsRequired();
 
             builder.Property(anuncio => anuncio.Titulo)
                 .HasColumnName("TITULO")
-                .HasColumnType(AdProjectContext.TYPE_STRING)
-                .HasMaxLength(200)
+                .HasColumnType("VARCHAR(200)")
+                //.HasColumnType(AdProjectContext.TYPE_STRING)
+                //.HasMaxLength(200)
                 .IsRequired();
 
             builder

@@ -110,11 +110,11 @@ namespace AdProject.Web
         {
             services.AddDbContext<AdProjectContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("dbconexao"),
-                    optionBuilder => optionBuilder.MigrationsAssembly("AdProject.Infrastructure")));
+                    optionBuilder => optionBuilder.MigrationsAssembly("AdProject.Infraestrutura")));
 
             //services.AddDbContext<AdProjectContext>(option =>
             //    option.UseNpgsql(Configuration.GetConnectionString("dbconexaopg"),
-            //    optionBuilder => optionBuilder.MigrationsAssembly("AdProject.Infrastructure")));
+            //    optionBuilder => optionBuilder.MigrationsAssembly("AdProject.Infraestrutura")));
         }
 
         private void ConfigureServicesIdentity(IServiceCollection services)

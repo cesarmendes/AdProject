@@ -24,15 +24,17 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes
             builder
                 .Property(pais => pais.Codigo)
                 .HasColumnName("CODIGO")
-                .HasColumnType(AdProjectContext.TYPE_STRING)
-                .HasMaxLength(3)
+                .HasColumnType("VARCHAR(3)")
+                //.HasColumnType(AdProjectContext.TYPE_STRING)
+                //.HasMaxLength(3)
                 .IsRequired();
 
             builder
                 .Property(pais => pais.Nome)
                 .HasColumnName("NOME")
-                .HasColumnType(AdProjectContext.TYPE_STRING)
-                .HasMaxLength(100)
+                .HasColumnType("VARCHAR(300)")
+                //.HasColumnType(AdProjectContext.TYPE_STRING)
+                //.HasMaxLength(100)
                 .IsRequired();
         }
     }
