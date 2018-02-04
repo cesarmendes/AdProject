@@ -11,6 +11,10 @@ namespace AdProject.Dominio.Repositorios
         where TKey : struct
         where TEntity : Entidade<TKey>
     {
+        List<TEntity> Todos();
+
+        Task<List<TEntity>> TodosAsync();
+
         TEntity Obter(TKey id);
 
         Task<TEntity> ObterAsync(TKey id);

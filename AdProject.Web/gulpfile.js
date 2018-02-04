@@ -34,7 +34,8 @@ var pathMove = [
     path.node + "/popper.js/**/*",
     path.node + "/sweetalert2/**/*",
     path.node + "/vue/**/*",
-    path.node + "/vue-resource/**/*"
+    path.node + "/vue-resource/**/*",
+    path.node + "/vue-the-mask/**/*"
 ];
 
 

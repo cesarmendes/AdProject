@@ -1,6 +1,7 @@
 ﻿using AdProject.Dominio.Entidades;
 using AdProject.Dominio.Repositorios;
 using AdProject.Dominio.ValueObjects;
+using AdProject.Infraestrutura.BancoDados.Contextos;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,9 @@ namespace AdProject.Infraestrutura.BancoDados.Repositorios
         where TKey : struct
         where TEntity : Entidade<TKey>
     {
-        public DbContext Context { get; private set; }
+        public AdProjectContext Context { get; private set; }
 
-        public Repositorio(DbContext context)
+        public Repositorio(AdProjectContext context)
         {
             if (context == null)
                 throw new ArgumentNullException("Repository context reference cannot be null");
@@ -62,9 +63,9 @@ namespace AdProject.Infraestrutura.BancoDados.Repositorios
             return this.Context.SaveChanges();
         }
 
-        public Task<int> SalvarAsync()
+        public async Task<int> SalvarAsync()
         {
-            return this.Context.SaveChangesAsync();
+            return await this.Context.SaveChangesAsync();
         }
 
         public Page<TKey, TEntity> Filtrar()
@@ -79,6 +80,16 @@ namespace AdProject.Infraestrutura.BancoDados.Repositorios
             query.Skip(10).Take(10).ToListAsync();
 
                       throw new NotImplementedException();
+        }
+
+        public List<TEntity> Todos()
+        {
+            return this.Context.Set<TEntity>().AsNoTracking().ToList();
+        }
+
+        public async Task<List<TEntity>> TodosAsync()
+        {
+            return await this.Context.Set<TEntity>().AsNoTracking().ToListAsync();
         }
     }
 }

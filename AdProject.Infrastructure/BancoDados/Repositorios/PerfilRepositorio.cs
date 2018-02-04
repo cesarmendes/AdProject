@@ -1,5 +1,6 @@
 ﻿using AdProject.Dominio.Entidades;
 using AdProject.Dominio.Repositorios;
+using AdProject.Infraestrutura.BancoDados.Contextos;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace AdProject.Infraestrutura.BancoDados.Repositorios
 {
     public class PerfilRepositorio : Repositorio<long, Perfil>, IPerfilRepositorio
     {
-        public PerfilRepositorio(DbContext context)
+        public PerfilRepositorio(AdProjectContext context)
             : base(context)
         {
         }

@@ -27,19 +27,24 @@
                     <div class="tab-pane fade show active" id="t1" role="tabpanel" aria-labelledby="pills-home-tab">
                         <form>
                             <div class="row">
-                                <div class="col-12 col-xl-6">
+                                <div class="col-12 col-sm-6 col-lg-4 col-xl-4">
                                     <div class="form-group">
-                                        <label>dafd</label>
                                         <input type="text" class="form-control" placeholder="Título" v-model="titulo" />
                                     </div>
                                     <div class="form-group">
-                                        <select class="form-control">
-                                            <option>Estado</option>
+                                        <select class="form-control" v-model="estado.id" v-on:change="buscarCidades">
+                                            <option selected="selected" value="">{{estado.texto}}</option>
+                                            <option v-for="estado in estado.colecao" v-bind:value="estado.id">
+                                                {{estado.codigo}}
+                                            </option>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <select class="form-control">
-                                            <option>Cidade</option>
+                                        <select class="form-control" v-model="cidade.id">
+                                            <option selected="selected" value="">{{cidade.texto}}</option>
+                                            <option v-for="cidade in cidade.colecao" v-bind:value="cidade.id">
+                                                {{cidade.nome}}
+                                            </option>
                                         </select>
                                     </div>
                                     <div class="form-group">
@@ -48,24 +53,39 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <select class="form-control">
-                                            <option>Categoria</option>
+                                        <select class="form-control" v-model="categoria.id">
+                                            <option selected="selected" value="">{{categoria.texto}}</option>
+                                            <option v-for="categoria in categoria.colecao" v-bind:value="categoria.id">
+                                                {{categoria.nome}}
+                                            </option>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <select class="form-control">
-                                            <option>Subcategoria</option>
+                                        <select class="form-control" v-model="subcategoria.id">
+                                            <option selected="selected" value="">{{subcategoria.texto}}</option>
+                                            <option v-for="subcategoria in subcategoria.colecao" v-bind:value="subcategoria.id">
+                                                {{subcategoria.nome}}
+                                            </option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-12 col-xl-6">
+                                <div class="col-12 col-sm-6 col-lg-4 col-xl-4">
                                     <div class="form-group">
-                                        <textarea rows="4" class="form-control" placeholder="Descrição">
+                                        <input type="text" class="form-control" placeholder="Cep" v-model="cep" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Telefone" v-model="telefone" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Valor"  v-model="valor" />
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4 col-xl-4">
+                                    <div class="form-group">
+                                        <textarea rows="6" class="form-control" placeholder="Descrição">
                                         </textarea>
                                     </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control col-xl-6 pull-right" placeholder="Valor" />
-                                    </div>
+                                   
                                 </div>
                             </div>
                         </form>
@@ -85,10 +105,34 @@
 </div>
 
 <script type="text/javascript">
+
     var v = new Vue({
         el: '#ac',
         data: {
+            cep:null,
             titulo: null,
+            telefone: null,
+            valor:null,
+            estado: {
+                id: '',
+                texto: 'Selecionar estado',
+                colecao: []
+            },
+            cidade: {
+                id: '',
+                texto: 'Selecionar cidade',
+                colecao:[]
+            },
+            categoria: {
+                id:'',
+                texto: 'Selecionar categoria',
+                colecao:[]
+            },
+            subcategoria: {
+                id:'',
+                texto: 'Selecionar subcategoria',
+                colecao:''
+            },
             tabs: {
                 geral: true,
                 fase2: false,
@@ -98,6 +142,50 @@
             }
         },
         methods: {
+            buscarEstados: function () {
+                this.estado.texto = 'Carregando...';
+
+                this.$http.get('@Url.Action("Listar", "Estado")').then(response => {
+                    this.estado.colecao = response.body;
+                    this.estado.texto = 'Selecionar estado';
+                    this.estado.id = '';
+                }, response => {
+                    this.estado.texto = 'Erro ao carregar';
+                });
+            },
+            buscarCidades: function () {
+                this.cidade.texto = 'Carregando...';
+                this.$http.get('@Url.Action("Listar", "Cidade")', { params: { id: this.estado.id } }  ).then(response => {
+                    this.cidade.colecao = response.body;
+                    this.cidade.texto = 'Selecionar cidade';
+                    this.cidade.id = '';
+                }, response => {
+                    this.cidade.texto = 'Erro ao carregar';
+                });
+            },
+            buscarCategorias: function ()
+            {
+                this.categoria.texto = 'Carregando...';
+
+                this.$http.get('@Url.Action("Listar", "Categoria")').then(response => {
+                    this.categoria.colecao = response.body;
+                    this.categoria.texto = 'Selecionar categoria';
+                    this.categoria.id = '';
+                }, response => {
+                    this.categoria.texto = 'Erro ao carregar';
+                });
+            },
+            buscarSubcategorias: function () {
+                this.subcategoria.texto = 'Carregando...';
+
+                this.$http.get('@Url.Action("Listar", "Subcategoria")', { params: { id: this.categoria.id } }).then(response => {
+                    this.subcategoria.colecao = response.body;
+                    this.subcategoria.texto = 'Selecionar subcategoria';
+                    this.cidade.id = '';
+                }, response => {
+                    this.subcategoria.texto = 'Erro ao carregar';
+                });
+            },
             avancar: function () {
                 alert('avancar');
             },
@@ -105,11 +193,9 @@
                 alert('voltar');
              }
         },
-        created: function () {
-            alert('criado');
-        },
         mounted: function () {
-            alert('montado');
+            this.buscarEstados();
+            this.buscarCategorias();
          }
     });
 </script>

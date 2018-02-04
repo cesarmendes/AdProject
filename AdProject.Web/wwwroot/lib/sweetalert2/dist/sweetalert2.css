@@ -593,8 +593,7 @@ body.swal2-no-backdrop .swal2-shown {
         -ms-flex-pack: center;
             justify-content: center; }
     .swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled[disabled] {
-      opacity: .4;
-      cursor: no-drop; }
+      opacity: .4; }
     .swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled:hover {
       background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNikAQAACIAHF/uBd8AAAAASUVORK5CYII="); }
     .swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled:active {
@@ -640,11 +639,12 @@ body.swal2-no-backdrop .swal2-shown {
     -webkit-box-shadow: none;
             box-shadow: none;
     color: #fff;
-    cursor: pointer;
     font-size: 1.0625em;
     font-weight: 500;
     margin: 0 .3125em;
     padding: .625em 2em; }
+    .swal2-popup .swal2-styled:not([disabled]) {
+      cursor: pointer; }
     .swal2-popup .swal2-styled.swal2-confirm {
       background-color: #3085d6; }
     .swal2-popup .swal2-styled.swal2-cancel {
@@ -655,6 +655,14 @@ body.swal2-no-backdrop .swal2-shown {
               box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(50, 100, 150, 0.4); }
     .swal2-popup .swal2-styled::-moz-focus-inner {
       border: 0; }
+  .swal2-popup .swal2-footer {
+    font-size: 1em;
+    border-top: 1px solid #eee;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 1.25em;
+    padding-top: 1em; }
   .swal2-popup .swal2-image {
     margin: 1.25em auto;
     max-width: 100%; }

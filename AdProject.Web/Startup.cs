@@ -15,6 +15,10 @@ using Microsoft.AspNetCore.Localization;
 using System.Globalization;
 using AutoMapper;
 using AdProject.Web.Filters;
+using AdProject.Infraestrutura.BancoDados.Contextos.Tipos;
+using AdProject.Aplicacao;
+using AdProject.Dominio.Repositorios;
+using AdProject.Infraestrutura.BancoDados.Repositorios;
 
 namespace AdProject.Web
 {
@@ -30,6 +34,9 @@ namespace AdProject.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //configuração do IOC
+            ConfigureServicesInjecao(services);
+
             //Configuração dos contextos de banco de dados
             ConfigureServicesContext(services);
 
@@ -108,13 +115,13 @@ namespace AdProject.Web
 
         private void ConfigureServicesContext(IServiceCollection services)
         {
-            services.AddDbContext<AdProjectContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("dbconexao"),
-                    optionBuilder => optionBuilder.MigrationsAssembly("AdProject.Infraestrutura")));
+            //services.AddDbContext<AdProjectContext>(options =>
+            //        options.UseSqlServer(Configuration.GetConnectionString("dbconexao"),
+            //        optionBuilder => optionBuilder.MigrationsAssembly("AdProject.Infraestrutura")));
 
-            //services.AddDbContext<AdProjectContext>(option =>
-            //    option.UseNpgsql(Configuration.GetConnectionString("dbconexaopg"),
-            //    optionBuilder => optionBuilder.MigrationsAssembly("AdProject.Infraestrutura")));
+            services.AddDbContext<AdProjectContext>(option =>
+                option.UseNpgsql(Configuration.GetConnectionString("dbconexaopg"),
+                optionBuilder => optionBuilder.MigrationsAssembly("AdProject.Infraestrutura")));
         }
 
         private void ConfigureServicesIdentity(IServiceCollection services)
@@ -136,6 +143,21 @@ namespace AdProject.Web
                 })
                 .AddEntityFrameworkStores<AdProjectContext>()
                 .AddDefaultTokenProviders();
+        }
+
+        private void ConfigureServicesInjecao(IServiceCollection services)
+        {
+            services.AddScoped<TiposBaseDados, TiposPostGreSql>();
+
+            services.AddScoped<ICidadeAplicacao, CidadeAplicacao>();
+            services.AddScoped<ICategoriaAplicacao, CategoriaAplicacao>();
+            services.AddScoped<IEstadoAplicacao, EstadoAplicacao>();
+            services.AddScoped<ISubcategoriaAplicacao, SubcategoriaAplicacao>();
+
+            services.AddScoped<IEstadoRepositorio, EstadoRepositorio>();
+            services.AddScoped<ICategoriaRepositorio, CategoriaRepositorio>();
+            services.AddScoped<ICidadeRepositorio, CidadeRepositorio>();
+            services.AddScoped<ISubcategoriaRepositorio, SubcategoriaRepositorio>();
         }
     }
 }

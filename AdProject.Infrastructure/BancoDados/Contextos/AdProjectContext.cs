@@ -1,5 +1,6 @@
 ﻿using AdProject.Dominio.Entidades;
 using AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes;
+using AdProject.Infraestrutura.BancoDados.Contextos.Tipos;
 using AdProject.Infraestrutura.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -11,24 +12,17 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos
 {
     public class AdProjectContext : IdentityDbContext<AppUser, AppRole, long, AppUserClaim, AppUserRole, AppUserLogin, AppRoleClaim, AppUserToken>
     {
-        public static readonly string SCHEME_NAME = "dbo";
-        public static readonly string TYPE_INT = "INT";
-        public static readonly string TYPE_BIGINT = "BIGINT";
-        public static readonly string TYPE_DECIMAL = "DECIMAL";
-        public static readonly string TYPE_BOOL = "BIT";
-        public static readonly string TYPE_STRING = "VARCHAR";
-        public static readonly string TYPE_TEXT = "TEXT";
-        public static readonly string TYPE_DATETIME = "DATETIME";
+        TiposBaseDados Tipos { get; set; }
 
-        public AdProjectContext()
+        public AdProjectContext(TiposBaseDados tipos)
             : base()
         {
-
+            this.Tipos = tipos;
         }
-        public AdProjectContext(DbContextOptions<AdProjectContext> options)
+        public AdProjectContext(DbContextOptions<AdProjectContext> options, TiposBaseDados tipos)
             : base(options)
         {
-
+            this.Tipos = tipos;
         }
 
         public DbSet<Anuncio> Anuncios { get; set; }
@@ -43,23 +37,23 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos
         {
             base.OnModelCreating(builder);
 
-            builder.ApplyConfiguration<Anuncio>(new AnuncioConfig());
-            builder.ApplyConfiguration<Categoria>(new CategoriaConfig());
-            builder.ApplyConfiguration<Cidade>(new CidadeConfig());
-            builder.ApplyConfiguration<Pais>(new PaisConfig());
-            builder.ApplyConfiguration<Perfil>(new PerfilConfig());
-            builder.ApplyConfiguration<Estado>(new EstadoConfig());
-            builder.ApplyConfiguration<Subcategoria>(new SubcategoriaConfig());
+            builder.ApplyConfiguration<Anuncio>(new AnuncioConfig(Tipos));
+            builder.ApplyConfiguration<Categoria>(new CategoriaConfig(Tipos));
+            builder.ApplyConfiguration<Cidade>(new CidadeConfig(Tipos));
+            builder.ApplyConfiguration<Pais>(new PaisConfig(Tipos));
+            builder.ApplyConfiguration<Perfil>(new PerfilConfig(Tipos));
+            builder.ApplyConfiguration<Estado>(new EstadoConfig(Tipos));
+            builder.ApplyConfiguration<Subcategoria>(new SubcategoriaConfig(Tipos));
 
 
             //Asp.Net Identity configuration
-            builder.ApplyConfiguration<AppRoleClaim>(new AppRoleClaimConfig());
-            builder.ApplyConfiguration<AppUserClaim>(new AppUserClaimConfig());
-            builder.ApplyConfiguration<AppUserLogin>(new AppUserLoginConfig());
-            builder.ApplyConfiguration<AppUserRole>(new AppUserRoleConfig());
-            builder.ApplyConfiguration<AppUserToken>(new AppUserTokenConfig());
-            builder.ApplyConfiguration<AppRole>(new AppRoleConfig());
-            builder.ApplyConfiguration<AppUser>(new AppUserConfig());
+            builder.ApplyConfiguration<AppRoleClaim>(new AppRoleClaimConfig(Tipos));
+            builder.ApplyConfiguration<AppUserClaim>(new AppUserClaimConfig(Tipos));
+            builder.ApplyConfiguration<AppUserLogin>(new AppUserLoginConfig(Tipos));
+            builder.ApplyConfiguration<AppUserRole>(new AppUserRoleConfig(Tipos));
+            builder.ApplyConfiguration<AppUserToken>(new AppUserTokenConfig(Tipos));
+            builder.ApplyConfiguration<AppRole>(new AppRoleConfig(Tipos));
+            builder.ApplyConfiguration<AppUser>(new AppUserConfig(Tipos));
         }
     }
 }

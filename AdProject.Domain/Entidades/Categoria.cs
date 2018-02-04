@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AdProject.Dominio.Entidades
 {
-    public class Categoria : Entidade<long>
+    public class Categoria : Entidade<int>
     {
         public string Nome { get; set; }
         public virtual ICollection<Subcategoria> SubCategorias { get; set; }

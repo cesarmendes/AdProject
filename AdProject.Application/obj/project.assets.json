@@ -25,6 +25,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "AdProject.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/AdProject.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AdProject.Dominio.dll": {}
+        }
       }
     }
   },
@@ -169,15 +179,21 @@
         "build/netstandard2.0/ref/netstandard.xml",
         "lib/netstandard1.0/_._"
       ]
+    },
+    "AdProject.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../AdProject.Domain/AdProject.Dominio.csproj",
+      "msbuildProject": "../AdProject.Domain/AdProject.Dominio.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "AdProject.Dominio >= 1.0.0",
       "NETStandard.Library >= 2.0.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cesar.silva.ext\\.nuget\\packages\\": {},
+    "C:\\Users\\cesar\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
@@ -187,18 +203,18 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Application\\AdProject.Aplicacao.csproj",
+      "projectUniqueName": "D:\\Projetos\\AdProject\\AdProject.Application\\AdProject.Aplicacao.csproj",
       "projectName": "AdProject.Aplicacao",
-      "projectPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Application\\AdProject.Aplicacao.csproj",
-      "packagesPath": "C:\\Users\\cesar.silva.ext\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Application\\obj\\",
+      "projectPath": "D:\\Projetos\\AdProject\\AdProject.Application\\AdProject.Aplicacao.csproj",
+      "packagesPath": "C:\\Users\\cesar\\.nuget\\packages\\",
+      "outputPath": "D:\\Projetos\\AdProject\\AdProject.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\cesar.silva.ext\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cesar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -211,7 +227,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Projetos\\AdProject\\AdProject.Domain\\AdProject.Dominio.csproj": {
+              "projectPath": "D:\\Projetos\\AdProject\\AdProject.Domain\\AdProject.Dominio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

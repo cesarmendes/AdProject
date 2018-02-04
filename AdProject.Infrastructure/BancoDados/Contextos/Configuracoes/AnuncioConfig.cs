@@ -1,4 +1,5 @@
 ﻿using AdProject.Dominio.Entidades;
+using AdProject.Infraestrutura.BancoDados.Contextos.Tipos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -9,22 +10,28 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes
 {
     public class AnuncioConfig : IEntityTypeConfiguration<Anuncio>
     {
+        TiposBaseDados Tipos { get; set; }
+
+        public AnuncioConfig(TiposBaseDados tipos)
+        {
+            Tipos = tipos;
+        }
         public void Configure(EntityTypeBuilder<Anuncio> builder)
         {
             builder
-                .ToTable("TBL_ANUNCIOS", AdProjectContext.SCHEME_NAME)
+                .ToTable("TBL_ANUNCIOS", Tipos.Esquema())
                 .HasKey(anuncio => anuncio.Id);
 
             builder
                 .Property(anuncio => anuncio.Id)
                 .HasColumnName("ID")
-                .HasColumnType(AdProjectContext.TYPE_BIGINT)
+                .HasColumnType(Tipos.BigInt())
                 .ValueGeneratedOnAdd();
 
             builder
                 .Property(anuncio => anuncio.Data)
                 .HasColumnName("DATA")
-                .HasColumnType(AdProjectContext.TYPE_DATETIME)
+                .HasColumnType(Tipos.DateTime())
                 .IsRequired();
 
             builder
@@ -45,12 +52,12 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes
             builder
                 .Property(anuncio => anuncio.ValorAnterior)
                 .HasColumnName("VALOR_ANTERIOR")
-                .HasColumnType(AdProjectContext.TYPE_DECIMAL);
-                
+                .HasColumnType(Tipos.Decimal());
+
             builder
                 .Property(anuncio => anuncio.Valor)
                 .HasColumnName("VALOR")
-                .HasColumnType(AdProjectContext.TYPE_DECIMAL)
+                .HasColumnType(Tipos.Decimal())
                 .IsRequired();
         }
     }

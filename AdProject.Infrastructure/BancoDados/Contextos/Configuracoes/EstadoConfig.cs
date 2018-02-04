@@ -1,4 +1,5 @@
 ﻿using AdProject.Dominio.Entidades;
+using AdProject.Infraestrutura.BancoDados.Contextos.Tipos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -9,38 +10,48 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes
 {
     public class EstadoConfig : IEntityTypeConfiguration<Estado>
     {
+        TiposBaseDados Tipos { get; set; }
+
+        public EstadoConfig(TiposBaseDados tipos)
+        {
+            this.Tipos = tipos;
+        }
         public void Configure(EntityTypeBuilder<Estado> builder)
         {
             builder
-                .ToTable("TBL_ESTADOS", AdProjectContext.SCHEME_NAME)
+                .ToTable("TBL_ESTADOS", Tipos.Esquema())
                 .HasKey(estado => estado.Id);
 
             builder
                 .Property(estado => estado.Id)
                 .HasColumnName("ID")
-                .HasColumnType(AdProjectContext.TYPE_INT)
+                .HasColumnType(Tipos.Int())
                 .ValueGeneratedNever();
 
             builder
                 .Property(estado => estado.IdPais)
                 .HasColumnName("ID_PAIS")
-                .HasColumnType(AdProjectContext.TYPE_INT);
+                .HasColumnType(Tipos.Int());
 
             builder
                 .Property(estado => estado.Codigo)
                 .HasColumnName("CODIGO")
-                .HasColumnType("VARCHAR(2)")
-                //.HasColumnType(AdProjectContext.TYPE_STRING)
-                //.HasMaxLength(2)
+                .HasColumnType(Tipos.String())
+                .HasMaxLength(2)
                 .IsRequired();
 
             builder
                 .Property(estado => estado.Nome)
                 .HasColumnName("NOME")
-                .HasColumnType("VARCHAR(300)")
-                //.HasColumnType(AdProjectContext.TYPE_STRING)
-                //.HasMaxLength(300)
+                .HasColumnType(Tipos.String())
+                .HasMaxLength(300)
                 .IsRequired();
+
+            builder
+                .HasMany(estado => estado.Cidades)
+                .WithOne(cidade => cidade.Estado)
+                .HasForeignKey(cidade => cidade.IdEstado)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
