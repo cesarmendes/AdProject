@@ -26,7 +26,7 @@ namespace AdProject.Infraestrutura.BancoDados.Contextos.Configuracoes
                 .Property(categoria => categoria.Id)
                 .HasColumnName("ID")
                 .HasColumnType(Tipos.Int())
-                .ValueGeneratedOnAdd();
+                .ValueGeneratedNever();
 
             builder
                 .Property(categoria => categoria.Nome)

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdProject.Dominio", "AdProject.Domain\AdProject.Dominio.csproj", "{D843AF02-4A9F-42DB-AC50-83C5F251445B}"
 EndProject
@@ -10,6 +10,30 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdProject.Infraestrutura", "AdProject.Infrastructure\AdProject.Infraestrutura.csproj", "{94DF2BB6-2549-4322-A280-5F35AF816D1C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdProject.Web", "AdProject.Web\AdProject.Web.csproj", "{52DB0DEC-D01C-41C3-B4B5-ACD5246EB807}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dump", "Dump", "{0F7E31F0-D3A5-419A-8263-95D2C2CB7315}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Categorias", "Categorias", "{4DFB6E48-5EFE-4D68-9184-E5C816930C69}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\cesar\Desktop\dump-base\Categorias\categorias.csv = C:\Users\cesar\Desktop\dump-base\Categorias\categorias.csv
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Paises", "Paises", "{7854CFB5-DB91-48E8-8FFD-D90050B24664}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Estados", "Estados", "{9B08106B-8B14-48F2-BD73-2CF7F342B2A0}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\cesar\Desktop\dump-base\estados.cepaberto\README.txt = C:\Users\cesar\Desktop\dump-base\estados.cepaberto\README.txt
+		C:\Users\cesar\Desktop\dump-base\estados.cepaberto\states.csv = C:\Users\cesar\Desktop\dump-base\estados.cepaberto\states.csv
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cidades", "Cidades", "{E77495A0-88C7-4292-A919-D3543179EDEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Subcategorias", "Subcategorias", "{3D50082E-F78F-4F7F-9777-002C130F3E41}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\cesar\Desktop\dump-base\Categorias\subcategorias.csv = C:\Users\cesar\Desktop\dump-base\Categorias\subcategorias.csv
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SP", "SP", "{A689AB32-1274-40C2-8E87-84E7C62C0910}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +60,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4DFB6E48-5EFE-4D68-9184-E5C816930C69} = {0F7E31F0-D3A5-419A-8263-95D2C2CB7315}
+		{7854CFB5-DB91-48E8-8FFD-D90050B24664} = {0F7E31F0-D3A5-419A-8263-95D2C2CB7315}
+		{9B08106B-8B14-48F2-BD73-2CF7F342B2A0} = {7854CFB5-DB91-48E8-8FFD-D90050B24664}
+		{E77495A0-88C7-4292-A919-D3543179EDEF} = {9B08106B-8B14-48F2-BD73-2CF7F342B2A0}
+		{3D50082E-F78F-4F7F-9777-002C130F3E41} = {4DFB6E48-5EFE-4D68-9184-E5C816930C69}
+		{A689AB32-1274-40C2-8E87-84E7C62C0910} = {E77495A0-88C7-4292-A919-D3543179EDEF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {12E583FB-2AB7-4D46-B727-2F9BD44F2739}

@@ -11,9 +11,10 @@ using System;
 namespace AdProject.Infraestrutura.Migrations
 {
     [DbContext(typeof(AdProjectContext))]
-    partial class AdProjectContextModelSnapshot : ModelSnapshot
+    [Migration("20180204195227_subcategorias_autoidentity_removido")]
+    partial class subcategorias_autoidentity_removido
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
