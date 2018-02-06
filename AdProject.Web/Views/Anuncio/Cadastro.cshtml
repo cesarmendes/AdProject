@@ -105,44 +105,38 @@
 </div>
 
 <script type="text/javascript">
+    var data = {
+        fase: 1,
+        p: 0,
+        cep: null,
+        titulo: null,
+        telefone: null,
+        valor: null,
+        estado: {
+            id: '',
+            texto: 'Selecionar estado',
+            colecao: []
+        },
+        cidade: {
+            id: '',
+            texto: 'Selecionar cidade',
+            colecao: []
+        },
+        categoria: {
+            id: '',
+            texto: 'Selecionar categoria',
+            colecao: []
+        },
+        subcategoria: {
+            id: '',
+            texto: 'Selecionar subcategoria',
+            colecao: ''
+        },
+    }
 
     var v = new Vue({
         el: '#ac',
-        data: {
-            fase: 1,
-            p:0,
-            cep:null,
-            titulo: null,
-            telefone: null,
-            valor:null,
-            estado: {
-                id: '',
-                texto: 'Selecionar estado',
-                colecao: []
-            },
-            cidade: {
-                id: '',
-                texto: 'Selecionar cidade',
-                colecao:[]
-            },
-            categoria: {
-                id:'',
-                texto: 'Selecionar categoria',
-                colecao:[]
-            },
-            subcategoria: {
-                id:'',
-                texto: 'Selecionar subcategoria',
-                colecao:''
-            },
-            tabs: {
-                geral: true,
-                fase2: false,
-                fase3: false,
-                fase4: false,
-                fase5: false
-            }
-        },
+        data: data,
         methods: {
             buscarEstados: function () {
                 this.estado.texto = 'Carregando...';

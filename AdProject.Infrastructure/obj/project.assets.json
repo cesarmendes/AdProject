@@ -1342,7 +1342,7 @@
       ]
     },
     "Microsoft.Extensions.Logging/2.0.0": {
-      "sha512": "VP10syWV/vxYYMKgZ2eDESmUsz3gPxvBn5J6tkVN8lI4M+dF43RN8fWsEPbcAneDmZrHl3Pv23z05nmyGkJlpg==",
+      "sha512": "rE83LQh4KwSQEEjw62MQMejlK1TPqTOiQaHkCujA9SfE2FeJbPA5Z9J8aCZZgIGX04s3uzip23SlrW78GmRmXg==",
       "type": "package",
       "path": "microsoft.extensions.logging/2.0.0",
       "files": [
@@ -1578,7 +1578,7 @@
       ]
     },
     "Newtonsoft.Json/10.0.3": {
-      "sha512": "hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
+      "sha512": "wBM7i7i3U2WX0ecor4zdVGvgrwFUjuigBoHKiL+nH39fCOpCPjBY3RDqJM32edvdyTAVdjzlccHsg41+/+zpSA==",
       "type": "package",
       "path": "newtonsoft.json/10.0.3",
       "files": [
@@ -2582,7 +2582,7 @@
       ]
     },
     "System.Interactive.Async/3.1.1": {
-      "sha512": "DkUY7nMzVjLJxXjGm3rFY6svK2Y1aM0Kore+nMlA3USGeNQP+0J7tuHlVFvu//IVKO2vDGuBHH8ACH0aAxvsyw==",
+      "sha512": "JxJFnfSdEud7mZ1keTgM5qZN0qfjz1vltRcHmsN6ZxJDClT1eZoQkwSv/6YWYwxzqxt2uXMh5GJiEMGUoemtAQ==",
       "type": "package",
       "path": "system.interactive.async/3.1.1",
       "files": [
@@ -3761,7 +3761,7 @@
       ]
     },
     "System.Runtime.Serialization.Formatters/4.3.0": {
-      "sha512": "LBsmmqkQEYwUCFwKZ6QK8FvGEgigTIsCAKDxM+Fjtu1W2WlxKMaCBi6kMZPOwB3xL2hdl77u7Avq9wlCI+9qjQ==",
+      "sha512": "KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
       "type": "package",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "files": [
@@ -4469,7 +4469,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cesar\\.nuget\\packages\\": {},
+    "C:\\Users\\cesar.silva.ext\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
@@ -4479,18 +4479,18 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\Projetos\\AdProject\\AdProject.Infrastructure\\AdProject.Infraestrutura.csproj",
+      "projectUniqueName": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Infrastructure\\AdProject.Infraestrutura.csproj",
       "projectName": "AdProject.Infraestrutura",
-      "projectPath": "D:\\Projetos\\AdProject\\AdProject.Infrastructure\\AdProject.Infraestrutura.csproj",
-      "packagesPath": "C:\\Users\\cesar\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos\\AdProject\\AdProject.Infrastructure\\obj\\",
+      "projectPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Infrastructure\\AdProject.Infraestrutura.csproj",
+      "packagesPath": "C:\\Users\\cesar.silva.ext\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\cesar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cesar.silva.ext\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -4504,8 +4504,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "D:\\Projetos\\AdProject\\AdProject.Domain\\AdProject.Dominio.csproj": {
-              "projectPath": "D:\\Projetos\\AdProject\\AdProject.Domain\\AdProject.Dominio.csproj"
+            "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Domain\\AdProject.Dominio.csproj": {
+              "projectPath": "C:\\Users\\cesar.silva.ext\\Documents\\Visual Studio 2017\\Projects\\AdProject\\AdProject.Domain\\AdProject.Dominio.csproj"
             }
           }
         }

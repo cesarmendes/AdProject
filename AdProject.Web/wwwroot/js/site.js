@@ -1,5 +1,5 @@
-﻿import Vue from './../lib/vue'
-import Resource from './../lib/vue-resource'
+﻿import Vue from 'vue'
+import Resource from 'vue-resource'
 
 Vue.use(Resource);
 
@@ -22,6 +22,8 @@ new Vue({
     }
 
 });
+
+
 
 
 
