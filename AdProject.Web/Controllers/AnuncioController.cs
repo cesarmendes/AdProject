@@ -15,13 +15,13 @@ namespace AdProject.Web.Controllers
             return View();
         }
 
-        public IActionResult Cadastro()
+        public IActionResult Cadastrar()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Cadastro(object model)
+        public IActionResult Cadastrar(object model)
         {
             try
             {

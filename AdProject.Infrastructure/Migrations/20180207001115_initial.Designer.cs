@@ -11,8 +11,8 @@ using System;
 namespace AdProject.Infraestrutura.Migrations
 {
     [DbContext(typeof(AdProjectContext))]
-    [Migration("20180204145812_categorias")]
-    partial class categorias
+    [Migration("20180207001115_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -58,7 +58,6 @@ namespace AdProject.Infraestrutura.Migrations
             modelBuilder.Entity("AdProject.Dominio.Entidades.Categoria", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnName("ID")
                         .HasColumnType("INT");
 
@@ -79,8 +78,6 @@ namespace AdProject.Infraestrutura.Migrations
                         .HasColumnName("ID")
                         .HasColumnType("INT");
 
-                    b.Property<int?>("EstadoId");
-
                     b.Property<int>("IdEstado")
                         .HasColumnName("ID_ESTADO")
                         .HasColumnType("INT");
@@ -88,11 +85,12 @@ namespace AdProject.Infraestrutura.Migrations
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnName("NOME")
-                        .HasColumnType("VARCHAR(300)");
+                        .HasColumnType("VARCHAR")
+                        .HasMaxLength(300);
 
                     b.HasKey("Id");
 
-                    b.HasIndex("EstadoId");
+                    b.HasIndex("IdEstado");
 
                     b.ToTable("TBL_CIDADES","dbo");
                 });
@@ -106,7 +104,8 @@ namespace AdProject.Infraestrutura.Migrations
                     b.Property<string>("Codigo")
                         .IsRequired()
                         .HasColumnName("CODIGO")
-                        .HasColumnType("VARCHAR(2)");
+                        .HasColumnType("VARCHAR")
+                        .HasMaxLength(2);
 
                     b.Property<int>("IdPais")
                         .HasColumnName("ID_PAIS")
@@ -115,13 +114,12 @@ namespace AdProject.Infraestrutura.Migrations
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnName("NOME")
-                        .HasColumnType("VARCHAR(300)");
-
-                    b.Property<int?>("PaisId");
+                        .HasColumnType("VARCHAR")
+                        .HasMaxLength(300);
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PaisId");
+                    b.HasIndex("IdPais");
 
                     b.ToTable("TBL_ESTADOS","dbo");
                 });
@@ -165,7 +163,6 @@ namespace AdProject.Infraestrutura.Migrations
             modelBuilder.Entity("AdProject.Dominio.Entidades.Subcategoria", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnName("ID")
                         .HasColumnType("INT");
 
@@ -342,14 +339,16 @@ namespace AdProject.Infraestrutura.Migrations
                 {
                     b.HasOne("AdProject.Dominio.Entidades.Estado", "Estado")
                         .WithMany("Cidades")
-                        .HasForeignKey("EstadoId");
+                        .HasForeignKey("IdEstado")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("AdProject.Dominio.Entidades.Estado", b =>
                 {
                     b.HasOne("AdProject.Dominio.Entidades.Pais", "Pais")
                         .WithMany("Estados")
-                        .HasForeignKey("PaisId");
+                        .HasForeignKey("IdPais")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("AdProject.Dominio.Entidades.Perfil", b =>

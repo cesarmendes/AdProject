@@ -1,11 +1,11 @@
-﻿<div class="row justify-content-center">
+﻿<div id="anuncios" class="row justify-content-center">
     <div class="col-12 col-lg-10 col-xl-8  mt-4">
         <div class="card border-green-dark bg-green-light shadown-green-dark">
             <div class="card-body p-2">
                 <div class="row justify-content-end">
                     <div class="col-12 col-xl-4">
                         <form>
-                            <input type="text" class="form-control" placeholder="Pesquisar" />
+                            <input type="text" class="form-control" placeholder="Pesquisar" v-model="pesquisar" />
                         </form>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
             <div class="card-body p-2">
                 <div class="row">
                     <div class="col-12">
-                        <a asp-action="Cadastro" asp-controller="Anuncio" class="btn btn-purple btn-lg pull-right">Inserir anúncio</a>
+                        <a asp-action="Cadastrar" asp-controller="Anuncio" class="btn btn-purple btn-lg pull-right">Inserir anúncio</a>
                     </div>
                 </div>
                 <div class="row">
@@ -66,28 +66,12 @@
 
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>16/12/2017</td>
-                                        <td>Vendo iphone novo na caixa</td>
-                                        <td>faslçafjsadçlfjsa çlfajsdf asjçlffljasdçlf asldfjasld faslçdjf </td>
-                                        <td>Publicado</td>
-                                        <td>Gratuito</td>
-                                        <td>
-                                            <button class="btn btn-purple btn-sm">Destaque-se</button>
-                                        </td>
-                                        <td>
-                                            <a href="#"><span class="fa fa-edit"></span></a>
-                                        </td>
-                                        <td>
-                                            <a href="#"><span class="fa fa-trash"></span></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>16/12/2017</td>
-                                        <td>Vendo iphone novo na caixa</td>
-                                        <td>faslçafjsadçlfjsa çlfajsdf asjçlffljasdçlf asldfjasld faslçdjf </td>
-                                        <td>Publicado</td>
-                                        <td>Gratuito</td>
+                                    <tr v-for="anuncio in anuncios">
+                                        <td>{{anuncio.data}}</td>
+                                        <td>{{anuncio.titulo}}</td>
+                                        <td>{{anuncio.descricao}}</td>
+                                        <td>{{anuncio.situacao}}</td>
+                                        <td>{{anuncio.tipo}}</td>
                                         <td>
                                             <button class="btn btn-purple btn-sm">Destaque-se</button>
                                         </td>
@@ -101,10 +85,35 @@
                                 </tbody>
                             </table>
                         </div>
-
+                        <div>
+                            dfadsf
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script src="~/lib/vue/dist/vue.js" type="text/javascript"></script>
+<script src="~/lib/vue-resource/dist/vue-resource.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    var model = {
+        anuncios: [],
+        pesquisar:null,
+    };
+
+    var vue = new Vue({
+        el: '#anuncios',
+        data: model,
+        watch:{
+            pesquisar: function (valor) {
+
+                alert(valor);
+            }
+        }
+
+
+    });
+</script>

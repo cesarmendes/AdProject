@@ -35,9 +35,8 @@ namespace AdProject.Infraestrutura.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    ID = table.Column<long>(type: "BIGINT", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    NOME = table.Column<string>(type: "VARCHAR(300)", nullable: false)
+                    ID = table.Column<int>(type: "INT", nullable: false),
+                    NOME = table.Column<string>(type: "VARCHAR", maxLength: 300, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -106,10 +105,9 @@ namespace AdProject.Infraestrutura.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    ID = table.Column<long>(type: "BIGINT", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    IdCategoria = table.Column<long>(nullable: false),
-                    NAME = table.Column<string>(type: "VARCHAR(300)", nullable: false)
+                    ID = table.Column<int>(type: "INT", nullable: false),
+                    IdCategoria = table.Column<int>(nullable: false),
+                    NAME = table.Column<string>(type: "VARCHAR", maxLength: 300, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -129,21 +127,20 @@ namespace AdProject.Infraestrutura.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "INT", nullable: false),
-                    CODIGO = table.Column<string>(type: "VARCHAR(2)", nullable: false),
+                    CODIGO = table.Column<string>(type: "VARCHAR", maxLength: 2, nullable: false),
                     ID_PAIS = table.Column<int>(type: "INT", nullable: false),
-                    NOME = table.Column<string>(type: "VARCHAR(300)", nullable: false),
-                    PaisId = table.Column<int>(nullable: true)
+                    NOME = table.Column<string>(type: "VARCHAR", maxLength: 300, nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_TBL_ESTADOS", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_TBL_ESTADOS_TBL_PAISES_PaisId",
-                        column: x => x.PaisId,
+                        name: "FK_TBL_ESTADOS_TBL_PAISES_ID_PAIS",
+                        column: x => x.ID_PAIS,
                         principalSchema: "dbo",
                         principalTable: "TBL_PAISES",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -289,33 +286,32 @@ namespace AdProject.Infraestrutura.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "INT", nullable: false),
-                    EstadoId = table.Column<int>(nullable: true),
                     ID_ESTADO = table.Column<int>(type: "INT", nullable: false),
-                    NOME = table.Column<string>(type: "VARCHAR(300)", nullable: false)
+                    NOME = table.Column<string>(type: "VARCHAR", maxLength: 300, nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_TBL_CIDADES", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_TBL_CIDADES_TBL_ESTADOS_EstadoId",
-                        column: x => x.EstadoId,
+                        name: "FK_TBL_CIDADES_TBL_ESTADOS_ID_ESTADO",
+                        column: x => x.ID_ESTADO,
                         principalSchema: "dbo",
                         principalTable: "TBL_ESTADOS",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_TBL_CIDADES_EstadoId",
+                name: "IX_TBL_CIDADES_ID_ESTADO",
                 schema: "dbo",
                 table: "TBL_CIDADES",
-                column: "EstadoId");
+                column: "ID_ESTADO");
 
             migrationBuilder.CreateIndex(
-                name: "IX_TBL_ESTADOS_PaisId",
+                name: "IX_TBL_ESTADOS_ID_PAIS",
                 schema: "dbo",
                 table: "TBL_ESTADOS",
-                column: "PaisId");
+                column: "ID_PAIS");
 
             migrationBuilder.CreateIndex(
                 name: "RoleNameIndex",

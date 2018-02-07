@@ -97,57 +97,59 @@
                 </div>
             </div>
             <div class="card-footer">
-                <a asp-action="Index" asp-controller="Anuncios" class="btn btn-link pull-left">Voltar</a>
+                <a class="btn btn-link pull-left" v-show="fase!=1" v-on:click="voltar">Voltar</a>
                 <button class="btn btn-purple pull-right" v-on:click="avancar">Avançar</button>
             </div>
         </div>
     </div>
 </div>
+<script src="~/lib/vue/dist/vue.js" type="text/javascript"></script>
+<script src="~/lib/vue-resource/dist/vue-resource.js" type="text/javascript"></script>
 
 <script type="text/javascript">
+    var model = {
+        url: {
+            estado: '@Url.Action("Listar", "Estado")',
+            cidade: '@Url.Action("Listar", "Cidade")',
+            categoria: '@Url.Action("Listar", "Categoria")',
+            subcategoria:'@Url.Action("Listar", "Subcategoria")'
+        },
+        fase: 1,
+        p: 0,
+        cep: null,
+        titulo: null,
+        telefone: null,
+        valor: null,
+        estado: {
+            id: '',
+            texto: 'Selecionar estado',
+            colecao: []
+        },
+        cidade: {
+            id: '',
+            texto: 'Selecionar cidade',
+            colecao: []
+        },
+        categoria: {
+            id: '',
+            texto: 'Selecionar categoria',
+            colecao: []
+        },
+        subcategoria: {
+            id: '',
+            texto: 'Selecionar subcategoria',
+            colecao: ''
+        }
+    }
 
     var v = new Vue({
         el: '#ac',
-        data: {
-            fase: 1,
-            p:0,
-            cep:null,
-            titulo: null,
-            telefone: null,
-            valor:null,
-            estado: {
-                id: '',
-                texto: 'Selecionar estado',
-                colecao: []
-            },
-            cidade: {
-                id: '',
-                texto: 'Selecionar cidade',
-                colecao:[]
-            },
-            categoria: {
-                id:'',
-                texto: 'Selecionar categoria',
-                colecao:[]
-            },
-            subcategoria: {
-                id:'',
-                texto: 'Selecionar subcategoria',
-                colecao:''
-            },
-            tabs: {
-                geral: true,
-                fase2: false,
-                fase3: false,
-                fase4: false,
-                fase5: false
-            }
-        },
+        data: model,
         methods: {
             buscarEstados: function () {
                 this.estado.texto = 'Carregando...';
 
-                this.$http.get('@Url.Action("Listar", "Estado")').then(response => {
+                this.$http.get(this.data.url.estado).then(response => {
                     this.estado.colecao = response.body;
                     this.estado.texto = 'Selecionar estado';
                     this.estado.id = '';
@@ -157,7 +159,7 @@
             },
             buscarCidades: function () {
                 this.cidade.texto = 'Carregando...';
-                this.$http.get('@Url.Action("Listar", "Cidade")', { params: { id: this.estado.id } }  ).then(response => {
+                this.$http.get(this.data.url.cidade, { params: { id: this.estado.id } }).then(response => {
                     this.cidade.colecao = response.body;
                     this.cidade.texto = 'Selecionar cidade';
                     this.cidade.id = '';
@@ -169,7 +171,7 @@
             {
                 this.categoria.texto = 'Carregando...';
 
-                this.$http.get('@Url.Action("Listar", "Categoria")').then(response => {
+                this.$http.get(this.data.url.categoria).then(response => {
                     this.categoria.colecao = response.body;
                     this.categoria.texto = 'Selecionar categoria';
                     this.categoria.id = '';
@@ -180,7 +182,7 @@
             buscarSubcategorias: function () {
                 this.subcategoria.texto = 'Carregando...';
 
-                this.$http.get('@Url.Action("Listar", "Subcategoria")', { params: { id: this.categoria.id } }).then(response => {
+                this.$http.get(this.data.url.subcategoria, { params: { id: this.categoria.id } }).then(response => {
                     this.subcategoria.colecao = response.body;
                     this.subcategoria.texto = 'Selecionar subcategoria';
                     this.cidade.id = '';
@@ -202,6 +204,7 @@
              }
         },
         mounted: function () {
+            this.data = model;
             this.buscarEstados();
             this.buscarCategorias();
          }
