@@ -35,8 +35,9 @@
     <Folder Include="Areas\Management\Data\" />
     <Folder Include="Areas\Management\Models\" />
     <Folder Include="Areas\Management\Views\" />
-    <Folder Include="Models\Account\" />
+    <Folder Include="Models\Conta\" />
     <Folder Include="AutoMapper\" />
+    <Folder Include="Models\Anuncio\" />
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 
