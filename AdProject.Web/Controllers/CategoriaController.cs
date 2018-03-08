@@ -20,6 +20,7 @@ namespace AdProject.Web.Controllers
         }
 
         public async Task<IActionResult> Listar() {
+            var todos = Aplicacao.TodosAsync();
             var categorias = await Aplicacao.TodosAsync();
 
             return Json(categorias);

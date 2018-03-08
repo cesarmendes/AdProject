@@ -7,27 +7,27 @@ using System.Threading.Tasks;
 
 namespace AdProject.Dominio.Repositorios
 {
-    public interface IRepositorio<TKey, TEntity>
-        where TKey : struct
-        where TEntity : Entidade<TKey>
+    public interface IRepositorio<TChave, TEntidade>
+        where TChave : struct
+        where TEntidade : Entidade<TChave>
     {
-        List<TEntity> Todos();
+        List<TEntidade> Todos();
 
-        Task<List<TEntity>> TodosAsync();
+        Task<List<TEntidade>> TodosAsync();
 
-        TEntity Obter(TKey id);
+        TEntidade Obter(TChave id);
 
-        Task<TEntity> ObterAsync(TKey id);
+        Task<TEntidade> ObterAsync(TChave id);
 
-        Page<TKey,TEntity> Filtrar();
+        Page<TChave,TEntidade> Filtrar();
 
-        void Inserir(TEntity entity);
+        void Inserir(TEntidade entity);
 
-        void Atualizar(TEntity entity);
+        void Atualizar(TEntidade entity);
 
-        void Remover(TEntity entity);
+        void Remover(TEntidade entity);
 
-        void Remover(TKey id);
+        void Remover(TChave id);
 
         int Salvar();
 
